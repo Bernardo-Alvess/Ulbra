@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    background-color: #D6D58E;
+    font-family: Roboto, sans-serif;
+}
+
+body{
+    background-color: rgb(243, 240, 240);
+    max-width: 1000px;
+    margin: auto;
+    padding: 10px 20px;
+    box-shadow: 0px 0px 11px 7px #000000a1;
+}
+
+header{
+    margin-bottom: 35px;
+}
+
+#titulo{
+    text-align: center;
+    background-color: #042940;
+    padding: 10px 0px 10px 0px;
+    border-radius: 20px;
+    margin: 15px;
+    color: #FFF;
+}
+
+#nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#lista{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 1.2em;
+}
+
+#foto_perfil{
+    height: 150px;
+    border-radius: 75px;
+    border: 3px solid #000;
+}
+
+li{
+    list-style: none;
+}
+
+.titulos-iniciais{
+    font-style: Roboto, "sans-serif";
+    font-weight: 300;
+    font-size: 2em;
+    margin: 15px 0px;
+    text-transform: uppercase;
+}
+
+.paragrafo-obj{
+    margin: 15px 0px;
+    font-size: 1em;
+}
