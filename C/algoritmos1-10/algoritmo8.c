@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <conio.h>
 
 int main(){
     float deposito, rendimento, total, taxa;
@@ -13,5 +14,7 @@ int main(){
     total = deposito + rendimento;
 
     printf("Levando em conta uma taxa de %.2f porcento.\nVocê obteve um rendimento de RS%.2f e um total de RS%.2f", taxa, rendimento, total);
+
+    getch();
     return 0;
 }

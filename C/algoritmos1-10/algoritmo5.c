@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <conio.h>
 
 int main(){
     float salario_atual, novo_salario, percentual, aumento;
@@ -14,5 +15,6 @@ int main(){
 
     printf("O seu salário aumentou em: RS%.2f Seu novo salário é de: R$%.2f", aumento, novo_salario);
 
+    getch();
     return 0;
 }

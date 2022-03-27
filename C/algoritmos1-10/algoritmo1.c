@@ -1,8 +1,10 @@
 #include <stdio.h>
+#include <conio.h>
 
 int main(){
     int n1, n2, n3, n4, soma;
 
+    printf("Vamos somar 4 números\n");
     printf("Número 1: \n");
     scanf("%d%*c", &n1);
 
@@ -17,5 +19,7 @@ int main(){
 
     soma = n1 + n2 + n3 + n4;
     printf("A soma dos 4 números é igual a: %d", soma);
+
+    getch();
     return 0;
 }

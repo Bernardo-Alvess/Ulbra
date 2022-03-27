@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <math.h>
+#include <conio.h>
 
 int main(){
     const float PI = 3.1415;
@@ -10,6 +11,8 @@ int main(){
 
     area = PI * pow(raio, 2);
 
-    printf("%f", area);
+    printf("A área do círculo é de: %.2f", area);
+    getch();
+
     return 0;
 }

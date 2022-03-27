@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <conio.h>
 
 int main(){
     float nota1, nota2, nota3, media;
@@ -15,5 +16,7 @@ int main(){
     media = (nota1 + nota2 + nota3) / 3;
 
     printf("O valor da média aritmética das três notas é de: %.1f", media);
+
+    getch();
     return 0;
 }

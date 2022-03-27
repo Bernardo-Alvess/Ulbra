@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <conio.h>
 
 int main(){
 
@@ -11,5 +12,8 @@ int main(){
     scanf("%f%*c", &h);
 
     area = (b * h) / 2;
-    printf("A área é de %.2f", area);
+    printf("A áres é de %.2f", area);
+
+    getch();
+    return 0;
 }

@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <conio.h>
+
 
 int main(){
     float salario, salario_receber, imposto;
@@ -12,5 +14,6 @@ int main(){
 
     printf("Levando em conta a gratificação recebida e o imposto cobrado, você receberá: R$%.2f", salario_receber);
 
+    getch();
     return 0;
 }

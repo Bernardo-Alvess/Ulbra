@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <conio.h>
 
 int main(){
     float nota1, nota2, nota3, peso1, peso2, peso3, soma1, soma2, soma3, media;
@@ -29,5 +30,6 @@ int main(){
 
     printf("A média é de: %.1f", media);
 
+    getch();
     return 0;
 }
