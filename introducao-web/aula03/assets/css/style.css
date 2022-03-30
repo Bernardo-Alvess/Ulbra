@@ -6,13 +6,21 @@
     box-sizing: border-box;
 }
 
+:root{
+    --main-black: #1F2024;
+    --greenish-blue: #004F4D;
+    --grey: #4B4952; 
+    --light-grey: #79717A;
+    --pinkish-brown: #A68F97;
+}
+
 html, body{
     max-width: 100%;
     overflow-x: hidden;
 }
 
 html{
-    background-color:#1F2024;
+    background-color: var(--main-black);
     font-family: Roboto, sans-serif;
 }
 
@@ -30,7 +38,7 @@ header{
 
 #titulo{
     text-align: center;
-    background-color: #1F2024;
+    background-color: var(--main-black);
     padding: 10px 0px 10px 0px;
     border-radius: 20px;
     margin: 15px;
@@ -60,7 +68,7 @@ header{
 
 .list-item-name{
     font-weight: bold;
-    color: #1F2024;
+    color: var(--main-black);
     transition: 0.5s;
 }
 
@@ -71,7 +79,7 @@ li{
 #foto-perfil{
     height: 200px;
     border-radius: 50%;
-    border: 3px solid #1F2024;
+    border: 3px solid var(--main-black);
     transition: 1s;
 }
 
@@ -91,7 +99,7 @@ li{
 }
 
 .line{
-    background-color: #004F4D;
+    background-color: var(--greenish-blue);
     height: 3px;
     width: 70%;
     margin-left: 10px;
