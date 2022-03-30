@@ -12,7 +12,7 @@ html, body{
 }
 
 html{
-    background-color: #D6D58E;
+    background-color:#b4bf5e54;
     font-family: Roboto, sans-serif;
 }
 
@@ -30,11 +30,16 @@ header{
 
 #titulo{
     text-align: center;
-    background-color: #042940;
+    background-color: #252617;
     padding: 10px 0px 10px 0px;
     border-radius: 20px;
     margin: 15px;
     color: #FFF;
+    transition: 0.5s;
+}
+
+#titulo:hover{
+    background: #334018;
 }
 
 #nav{
@@ -53,14 +58,28 @@ header{
     margin-top: 10px;
 }
 
+.list-item-name{
+    color: #CAD959;
+    transition: 0.5s;
+}
+
+.list-item-name:hover{
+    color: #64732F;
+}
+
 li{
     list-style: none;
 }
 
-#foto_perfil{
+#foto-perfil{
     height: 150px;
     border-radius: 75px;
-    border: 3px solid #000;
+    border: 3px solid #334018;
+    transition: 1s;
+}
+
+#foto-perfil:hover{
+    border: 3px solid #64732F;
 }
 
 .titulos-iniciais{
@@ -79,8 +98,8 @@ li{
 }
 
 .line{
-    background-color: red;
-    height: 5px;
+    background-color: #CAD959;
+    height: 3px;
     width: 70%;
     margin-left: 10px;
 }
