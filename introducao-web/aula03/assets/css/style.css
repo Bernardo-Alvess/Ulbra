@@ -83,7 +83,7 @@ li{
     transition: 1s;
 }
 
-.titulos-iniciais{
+.title-format{
     font-style: Roboto, "sans-serif";
     font-weight: 300;
     font-size: 2em;
@@ -109,4 +109,31 @@ li{
     margin: 15px 0px;
     font-size: 1em;
     font-weight: 525;
+}
+
+#bottom-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 50px;
+}
+
+#left-content{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    justify-content: space-between;
+    padding-right: 40px;
+    border-right: 3px solid var(--greenish-blue);
+}
+#right-content{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+.bottom-titles{
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    border-bottom: 3px solid var(--greenish-blue);
 }
