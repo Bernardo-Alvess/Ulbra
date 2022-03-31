@@ -76,6 +76,17 @@ li{
     list-style: none;
 }
 
+.list-abilities{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 15px 0px;
+}
+
+.list-abilities li{
+    font-size: 1.2em;
+}
+
 #foto-perfil{
     height: 200px;
     border-radius: 50%;
@@ -84,7 +95,6 @@ li{
 }
 
 .title-format{
-    font-style: Roboto, "sans-serif";
     font-weight: 300;
     font-size: 2em;
     margin: 15px 0px;
@@ -107,7 +117,7 @@ li{
 
 .paragrafo-obj{
     margin: 15px 0px;
-    font-size: 1em;
+    font-size: 1.2em;
     font-weight: 525;
 }
 
@@ -115,7 +125,8 @@ li{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    gap: 50px;
+    justify-content: space-between;
+    gap: 15px;
 }
 
 #left-content{
@@ -123,17 +134,80 @@ li{
     flex-direction: column;
     width: 45%;
     justify-content: space-between;
-    padding-right: 40px;
-    border-right: 3px solid var(--greenish-blue);
 }
+
+#middle-line{
+    background-color: var(--greenish-blue);
+    width: 3px;
+}
+
 #right-content{
     display: flex;
     flex-direction: column;
     width: 45%;
 }
 
+.experience-title{
+    width: 350px;
+}
+
 .bottom-titles{
     text-transform: uppercase;
+    padding-bottom: 5px;
     margin-bottom: 10px;
     border-bottom: 3px solid var(--greenish-blue);
+}
+
+.cargo-format{
+    color: gray;
+    font-style: italic;
+}
+
+.ball-line{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-left: 5px;
+    gap: 10px;
+}
+
+.ball{
+    height: 15px;
+    width: 15px;
+    background-color: var(--greenish-blue);
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.empty-ball{
+    height: 15px;
+    width: 15px;
+    background-color: #FFF;
+    border-radius: 50%;
+    border: 2px solid var(--greenish-blue);
+}
+
+.exp-paragraph{
+    margin-top: 5px
+}
+
+@media (max-width: 800px){
+
+    #bottom-container{
+        flex-direction: column;
+    }
+
+    #left-content{
+        width: 100%;
+        text-align: center;
+    }
+
+    #right-content{
+        width: 100%;
+        text-align: center;
+    }
+
+    .experience-title{
+        width: 100%;
+    }
 }
