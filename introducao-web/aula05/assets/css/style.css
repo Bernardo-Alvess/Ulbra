@@ -72,6 +72,15 @@ header{
     transition: 0.5s;
 }
 
+.list-link{
+    text-decoration: none;
+    color: #000;
+}
+
+.list-link:hover{
+    color: var(--greenish-blue);
+}
+
 li{
     list-style: none;
 }
