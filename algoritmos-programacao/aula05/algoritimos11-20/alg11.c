@@ -13,12 +13,20 @@ int main(){
     printf("Adicione um número");
     scanf("%f%*c", &num);
 
+    if(num > 0){
+
     num_raiz = sqrtf(num);
     num_quad = powf(num, 2);
     num_cube = powf(num, 3);
     num_raiz_cube = cbrtf(num);
 
     printf("Numero ao quadrado = %.3f\nNumero ao cubo = %.3f\n Raiz quadrada do numero = %.3f\n Raiz cubica do numero = %.3f", num_quad, num_cube, num_raiz, num_raiz_cube);
+
+    }
+
+    else{
+        printf("Digite um numero maior que zero");
+    }
 
     getch();
 

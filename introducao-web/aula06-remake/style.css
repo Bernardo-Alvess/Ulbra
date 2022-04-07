@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(236, 231, 231);
+}
+
+header{
+    background-color: #162E58;
+    color: #FFF;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 5px;
+}
+
+header > h1{
+    align-self: flex-start;
+    font-size: 1.5em;
+    padding: 15px;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+nav > a{
+    text-decoration: none;
+    color: #FFF;
+    font-size: 1.1em;
+}
+
+main{
+    background-color: #FFF;
+    width: 60%;
+    margin: 0 auto;
+    box-shadow: rgba(0, 0, 0, 0.438) 0px 2px 10px 2px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.tableFormat{
+    text-align: center;
+    width: 100%;
+}
+
+
+tr{
+    white-space: nowrap;
+}
+
+td{
+    width: 100%;
+}
+
+.fa-check-circle{
+    color: green;
+}
+
+.timeLogo{
+    height: 30px;
+    position: relative;
+    top: 5px;
+    right: 7px;
+    margin: 0 7px;
+}

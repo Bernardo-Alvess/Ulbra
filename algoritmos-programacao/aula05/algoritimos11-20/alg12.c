@@ -11,11 +11,17 @@ int main(){
     printf("Qual o segundo numero?\n");
     scanf("%f%*c", &num2);
 
-    num1_pow = pow(num1, num2);
-    num2_pow = pow(num2, num1);
+    if(num1 > 0 && num2 > 0){
+        num1_pow = pow(num1, num2);
+        num2_pow = pow(num2, num1);
 
-    printf("Numero %2.1f elevado a %2.1f = %2.1f\n", num1, num2, num1_pow);
-    printf("Numero %2.1f elevado a %2.1f = %2.1f", num2, num1, num2_pow);
+        printf("Numero %2.1f elevado a %2.1f = %2.1f\n", num1, num2, num1_pow);
+        printf("Numero %2.1f elevado a %2.1f = %2.1f", num2, num1, num2_pow);
+    }
+
+    else{
+        printf("Digite um numero maior que zero");
+    }
 
     return 0;
 }
