@@ -7,22 +7,23 @@ body{
     background-color: rgb(236, 231, 231);
 }
 
+/*Cabeçalho*/
+
 header{
-    background-color: #162E58;
-    color: #FFF;
+    background-color: #001b57;
+    color: white;
     height: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
     margin-bottom: 5px;
 }
 
-header > h1{
+header h1{
     align-self: flex-start;
-    font-size: 1.5em;
-    padding: 15px;
+    font-size: 1.3em;
 }
 
 nav{
@@ -31,11 +32,13 @@ nav{
     gap: 30px;
 }
 
-nav > a{
+nav a{
     text-decoration: none;
     color: #FFF;
     font-size: 1.1em;
 }
+
+/*---------------------------------------*/
 
 main{
     background-color: #FFF;
@@ -46,28 +49,35 @@ main{
     padding: 10px;
 }
 
+ /*Tabela Classificação*/
+
 .tableFormat{
+    width: 100%;
     text-align: center;
-    width: 100%;
 }
 
-
-tr{
-    white-space: nowrap;
+.tableFormat td{
+    margin-top: 0.5rem;
 }
 
-td{
-    width: 100%;
+.tableHovering:nth-child(odd):hover{
+    background-color: rgb(236, 231, 231);
+}
+
+.firstContent{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 15rem;
+    gap: 20px;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 15px;
+}
+
+.timeLogo{
+    height: 25px;
 }
 
 .fa-check-circle{
     color: green;
-}
-
-.timeLogo{
-    height: 30px;
-    position: relative;
-    top: 5px;
-    right: 7px;
-    margin: 0 7px;
 }
