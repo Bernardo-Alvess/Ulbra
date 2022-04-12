@@ -54,10 +54,12 @@ main{
 .tableFormat{
     width: 100%;
     text-align: center;
+    margin-bottom: 10px;
 }
 
 .tableFormat td{
-    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 }
 
 .tableHovering:nth-child(odd):hover{
@@ -74,10 +76,18 @@ main{
     padding-left: 15px;
 }
 
+td, th{
+    border: 1px solid black;
+}
+
 .timeLogo{
     height: 25px;
 }
 
 .fa-check-circle{
     color: green;
+}
+
+.tableSections{
+    margin-bottom: 10px;
 }
