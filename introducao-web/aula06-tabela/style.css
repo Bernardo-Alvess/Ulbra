@@ -41,10 +41,9 @@ nav a{
 /*---------------------------------------*/
 
 main{
-    background-color: #FFF;
+    background-color: rgb(236, 231, 231);
     width: 60%;
     margin: 0 auto;
-    box-shadow: rgba(0, 0, 0, 0.438) 0px 2px 10px 2px;
     border-radius: 5px;
     padding: 10px;
 }
@@ -52,8 +51,10 @@ main{
  /*Tabela Classificação*/
 
 .tableFormat{
-    width: 100%;
+    margin: auto;
+    width: 90%;
     text-align: center;
+    vertical-align: middle;
     margin-bottom: 10px;
 }
 
@@ -62,22 +63,22 @@ main{
     padding-bottom: 0.5rem;
 }
 
-.tableHovering:nth-child(odd):hover{
+.trBorderSelection{
+    border-top: 1px solid gray;
+}
+
+.tableHovering:nth-child(odd):hover{ 
     background-color: rgb(236, 231, 231);
 }
 
 .firstContent{
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    gap: 10px;
     width: 15rem;
-    gap: 20px;
     align-items: center;
     justify-content: flex-start;
     padding-left: 15px;
-}
-
-td, th{
-    border: 1px solid black;
 }
 
 .timeLogo{
@@ -90,4 +91,43 @@ td, th{
 
 .tableSections{
     margin-bottom: 10px;
+    background-color: #FFF;
+    box-shadow: rgba(0, 0, 0, 0.438) 0px 2px 10px 2px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.tituloSections{
+    padding: 10px;
+}
+
+table{
+    border-collapse: collapse;  
+}
+
+.tableHead{
+    height: 45px;
+    font-size: 1.1em;
+    color: gray;
+}
+
+.tableJogos td:nth-child(even){
+    border-left: 1px solid black;
+}
+
+.tableTdBorder{
+    border-bottom: 1px solid black;
+}
+
+.bordaAzul{
+    border-left: 3px solid #001b57;
+}
+
+.bordaVermelha{
+    border-left: 3px solid red;
+}
+
+.tdClube, .tdHorario{
+    text-align: center;
+    font-size: 10px;
 }
