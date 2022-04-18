@@ -1,71 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300&display=swap');
+
 *{
     margin: 0;
     padding: 0;
+    font-family: "Lato", sans-serif;
+
 }
 
-#headerContainer{
+body, html{
     color: #FFF;
-    display: flex;
-    gap: 40px;
-    flex-direction: column;
+}
+
+header{
+    height: 120px;
     background-color: #162E58;
-    min-height: 100px;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     margin-bottom: 5px;
 }
 
-#headerTitle{
+header > h1{
     align-self: flex-start;
-    padding: 15px;
+    font-size: 1.1em;
 }
 
-#headerTitle{
-    font-size: 0.5em;
-}
-
-#headerNav{
+header nav{
     display: flex;
-    flex-direction: row;
-    gap: 30px;
+    gap: 20px;
 }
 
-#headerNav a{
-    font-size: 1em;
-    color: white;
-    text-decoration: none;
+header nav a{
+    text-decoration: none;    
+    font-size: 1.3em;
+    color: #FFF;
+    border: 2px solid transparent;
+    transition: .5s;
+}
+
+header nav a:hover{
+    border-bottom: 2px solid #FFF;
+
 }
 
 body{
-    background-color: #f1f1f1;
+    background-color: rgb(29, 28, 28);
 }
 
 main{
-    background-color: #FFF;
-    width: 80%;
+    background-color: rgb(29, 28, 28);
+    width: 70%;
     margin: 0 auto;
-    box-shadow: rgba(0, 0, 0, 0.548) 0px 0px 9px 0px;
-    border-radius: 5px;
+    border-radius: 15px;
     padding: 10px;
-    margin-bottom: 15px;
 }
 
-/*start here*/
+/*Estilização da table*/
 
-.tableDados{
-    width: 80%;
+table, td, th{
+    border-collapse: collapse;
+    border-bottom: 1px solid #FFF;
+    padding: 7px;
+}
+
+section{
+    background-color: rgb(15, 15, 15);
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.shadow{
+    box-shadow: 0px 7px 10px rgb(15 15 15 / 30%);
+}
+
+td{
+    width: 100%;
+}
+
+table{
     text-align: center;
-}
-
-td, th{
-    border: 1px solid black;
-}
-
-footer{
-    background: white;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
-    padding: 10px;
-    box-shadow: rgba(0, 0, 0, 0.548) 0px 0px 9px 0px;
-    border-radius: 5px;
+}
+
+td img{
+    height: 20px;
+}
+
+.tableHead{
+    white-space: nowrap;
+    font-size: 13px;
+    font-weight: 600;
+    color: gray;
+}
+
+.firstContent{
+    display: flex;
+    gap: 10px;
+    padding-left: 10px;
+}
+
+
+
+.firstContentJogador{
+    display: inline-flex;
+    gap: 20px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+.jogadorTime{
+    padding-left: 35px;
+    color: gray;
+}
+
+.proxJogos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(29, 28, 28);
+    padding: 0;
+}
+
+.proxJogos section{
+    background-color: rgb(15, 15, 15);
+    padding: 20px;
+}
+
+.proxJogos table, .proxJogos th, .proxJogos td{
+    border: none;
+}
+
+.nomeClube{
+    margin-left: 10px;
+}
+
+.middleRowJogos{
+    padding-right: 25px;
+}
+
+.middleRowJogos > div{
+    background-color: inherit;
+    border-top: 2px solid #FFF;
+    border-left: 2px solid #FFF;
+    transform: rotate(-45deg);
+    height: 5px;
+    width: 5px;
+    position: relative;
+    bottom: 12px;
+    left: 15px;
+}
+
+.bordaAzul{
+    border-left: 2px solid blue;
+}
+
+.bordaVermelha{
+    border-left: 2px solid red;
 }
