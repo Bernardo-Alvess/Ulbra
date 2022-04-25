@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'helvetica', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #0F0F0F;
+    overflow-x: auto;
+}
+
+/*scrollbar*/
+
+html::-webkit-scrollbar{
+    width: 0.8vw;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: #19CFC9;
+    border: 0.15em solid white;
+}
+
+html::-webkit-scrollbar-track{
+    background-color: white;
+}
+
+/*Header styling*/
+
+header{
+    height: 50px;
+    padding: 10px;
+    background-color: #f0f0f01e;
+    color: #19CFC9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h3{
+    font-size: 1.3em;
+}
+
+header ul{
+    display: inline-flex;
+    list-style: none;
+    gap: 15px;
+}
+
+header a{
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #19CFC9;
+    text-decoration: none;
+}
+
+/*Main content*/
+
+.intro{
+    height: 100vh;
+    color: #F0F0F0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.intro p{
+    font-size: 1.4em;
+}
+
+.intro h2{
+    font-size: 5em;
+    text-transform: lowercase;
+}
+
+/*Projects Section*/
+
+.projects{
+    height: 110vh;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.projects-card{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/*Card Customization*/
+
+.card{
+    width: 300px;
+    height: 400px;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    text-align: left;
+    gap: 10px;
+    border-radius: 10px;
+    background-color: #1f1d1d;
+    color: #f0f0f0;
+    font-weight: 500;
+}
+
+.card-line{
+    height: 5px;
+    width: 100%;
+    padding-left: 10px;
+    background-color: #19CFC9;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    position: relative;
+    right: 3.7%;
+}
+
+/*Individual Projects*/
+
+.card-void{
+    background: url("imgs/blackHoleMod2.png");
+}
+
+/*Contact section*/
+
+.contact{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #0F0F0F;
+    color: #f0f0f0;
+}
+
+form{
+    display: flex;
+    height: 90%;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+form button{
+    padding: 10px;
+    width: 100px;
+    height: 50px;
+    border-radius: 100vw;
+    border: 1px solid #F0F0F0;
+    color: #F0F0F0;
+    background-color: inherit;
+}
+
+.contact-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contact-button-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#f-name-label, #f-email-label, #f-message-label{
+    font-size: 1.3em;
+    font-weight: 200;
+}
+
+#f-name-input, #f-email-input{
+    padding: 10px;
+    height: 25px;
+    width: 500px;
+    background: #181818;
+    border: 1px solid #f0f0f0;
+    border-radius: 10px;
+}
+
+#f-message-area{
+    padding: 10px;
+    background: #181818;
+    border: 1px solid #f0f0f0;
+    border-radius: 10px;
+}

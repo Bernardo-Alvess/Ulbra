@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <header>
+        <h3>B.</h3>
+        <nav>
+            <ul>
+                <li><a href="#contact">contact.</a></li>
+                <li><a href="#">github.</a></li>
+                <li><a href="#">linkedin.</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="intro">
+        <p>Hi, I'm Bernardo</p>
+        <h2>Developer && programmer</h2>
+    </section>
+    <section class="projects">
+        <h2>PROJECTS</h2>
+        <section class="projects-card">
+            <div class="card card-void">
+                <h4>V.OID</h4>
+                <div class="card-line"></div>
+                <p>
+                    V.OID is a project about an e-commerce centered around darkness, built with plain HTML and CSS. <br>
+                    V.OID is still in development.
+                </p>
+            </div>
+            <div class="card card-void">
+                <div class="card-written-content">
+                    <h4>lorem ipsum</h4>
+                    <div class="card-line"></div>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos repudiandae, adipisci iusto non iste veniam maxime sed maiores nobis quam distinctio tempore illum natus repellendus, dicta quos. Totam, quasi atque.
+                    </p>
+                </div>
+            </div>
+            <div class="card card-void">
+                <h4>lorem ipsum</h4>
+                <div class="card-line"></div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid pariatur earum quas hic qui ratione aliquam debitis, labore ducimus aut rerum facere! Soluta nulla alias deserunt amet repellendus! Tempore, ad.
+                </p>
+            </div>
+        </section>
+    </section>
+    <section class="contact" id="contact">
+    <h2>CONTACT ME</h2>
+        <form onsubmit="sendEmail(); reset();">
+            <div class="contact-div">
+                <label for="name" id="f-name-label" >Name:</label><br>
+                <input type="text" name="f-name" id="f-name-input" placeholder="John Doe" required><br>
+                <label for="f-email" id="f-email-label">E-mail:</label><br>
+                <input type="email" name="f-email" id="f-email-input" placeholder="E-mail address..." required ><br>
+                <label for="f-message" id="f-message-label">Message:</label><br>
+                <textarea name="f-message-area" id="f-message-area" cols="30" rows="10" placeholder="Dude, this is such a cool portfolio. You're hired - Bill Gates" required></textarea>
+            </div>
+
+            <div class="contact-button-div">
+                <button type="submit">Send</button>
+            </div>
+        </form>
+    </section>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
