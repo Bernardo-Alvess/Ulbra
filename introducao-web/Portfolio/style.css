@@ -132,6 +132,23 @@ header a{
     background: url("imgs/blackHoleMod2.png");
 }
 
+/*About section*/
+
+.about{
+    height: 110vh;
+    background-color: #0f0f0f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-inner-div{
+    height: 80%;
+    width: 50%;
+    background-color: red;
+    border-radius: 10px;
+}
+
 /*Contact section*/
 
 .contact{
@@ -140,8 +157,8 @@ header a{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #0F0F0F;
-    color: #f0f0f0;
+    background-color: #FFF;
+    color: #0f0f0f;
 }
 
 form{
@@ -157,7 +174,7 @@ form button{
     height: 50px;
     border-radius: 100vw;
     border: 1px solid #F0F0F0;
-    color: #F0F0F0;
+    color: #0f0f0f;
     background-color: inherit;
 }
 
@@ -182,14 +199,14 @@ form button{
     padding: 10px;
     height: 25px;
     width: 500px;
-    background: #181818;
-    border: 1px solid #f0f0f0;
+    background: #f8f8f8;
+    border: 1px solid #0f0f0f;
     border-radius: 10px;
 }
 
 #f-message-area{
     padding: 10px;
-    background: #181818;
-    border: 1px solid #f0f0f0;
+    background: #f8f8f8;
+    border: 1px solid #0f0f0f;
     border-radius: 10px;
 }
