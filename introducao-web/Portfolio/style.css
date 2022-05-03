@@ -7,10 +7,11 @@
     font-family: 'helvetica', sans-serif;
     scroll-behavior: smooth;
 }
-
+    
 body{
     background-color: #0F0F0F;
-    overflow-x: auto;
+    overflow-x: hidden;
+    overscroll-behavior-y: none;
 }
 
 /*scrollbar*/
