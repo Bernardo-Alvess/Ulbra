@@ -12,21 +12,21 @@
 //     );
 // }
 
-var switchLangButton = document.getElementById('switch-lang');
-var userLang = navigator.language || navigator.userLanguage; 
-var switchLangButton = document.getElementById('switch-lang');
-let ptBr = document.querySelector('.pt-Br');
+// var switchLangButton = document.getElementById('switch-lang');
+// var userLang = navigator.language || navigator.userLanguage; 
+// var switchLangButton = document.getElementById('switch-lang');
+// let ptBr = document.querySelector('.pt-Br');
 
 
-function switchLanguage(){
-  switch (userLang) {
-    case 'en-US':
-        ptBr.classList.add('hide');
-      break;
-    case 'pt-BR':
-        ptBr.classList.add('show');
-      break;
-  }
-}
+// function switchLanguage(){
+//   switch (userLang) {
+//     case 'en-US':
+//         ptBr.classList.add('hide');
+//       break;
+//     case 'pt-BR':
+//         ptBr.classList.add('show');
+//       break;
+//   }
+// }
 
-switchLangButton.addEventListener('click', switchLanguage);
+// switchLangButton.addEventListener('click', switchLanguage);
