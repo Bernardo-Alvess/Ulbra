@@ -17,7 +17,8 @@ int main(){
     printf("Digite um valor para C:\n");
     scanf("%f%*c", &C);
 
-    printf("Digite um valor para I: (1, 2, 3)\n");
+    printf("Digite um valor para I\n");
+    printf("1 - ordem crescente\n2 - ordem decrescente\n3 - maior no meio\n");
     scanf("%i%*c", &I);
 
     switch(I){
@@ -28,8 +29,7 @@ int main(){
             printf("Todos os numeros sao iguais");
         }
         else if(A < B && A < C){
-            if (B < C)
-            {
+            if (B < C){
                 printf("A ordem crescente e de %.2f, %.2f, %.2f", A, B, C);
             }
             else{
