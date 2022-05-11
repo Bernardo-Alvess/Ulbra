@@ -1,0 +1,28 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.perfil{
+    height: 250px;
+}
+
+.sobre-div{
+    height: 250px;
+}
+
+.lupa{
+    width: 100px;
+}
+
+.trabalhos{
+    height: 540px;
+}
+
+.tamanho-img-trabalhos{
+    height: 200px;
+}
+
+.footer-font-size{
+    font-size: 1.2em;
+}
