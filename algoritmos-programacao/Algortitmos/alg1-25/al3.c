@@ -1,3 +1,5 @@
+// Faça um programa que receba dois números e mostre o menor
+
 #include <stdio.h>
 
 int main(){

@@ -1,3 +1,11 @@
+// Faça um programa que receba duas notas, calcule e mostre a média aritmética e a mensagem que se encontra
+// na tabela a seguir: 
+
+//  < 3 - REPROVADO
+// < 7 - EXAME
+// <= 10 APROVADO
+
+
 #include <stdio.h>
 
 int main(){
