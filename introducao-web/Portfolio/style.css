@@ -33,6 +33,7 @@ html::-webkit-scrollbar-track{
 
 header{
     height: 50px;
+    width: 100%;
     padding: 10px;
     background-color: #f0f0f01e;
     color: #19CFC9;
@@ -45,23 +46,44 @@ header h3{
     font-size: 1.3em;
 }
 
-header ul{
+nav{
+    padding-right: 15px;
+}
+
+
+
+nav ul{
     display: inline-flex;
     list-style: none;
     gap: 15px;
 }
 
-header a{
+nav a{
     font-size: 1.1em;
     font-weight: bold;
     color: #f0f0f0;
     text-decoration: none;
+    transition: 0.5s;
+}
+
+nav a:hover{
+    color: #19CFC9;
+}
+
+@media(max-width: 550px){
+    header ul{
+        gap: 5px;
+    }
+    header a{
+        font-size: 0.9em;
+    }
 }
 
 /*Main content*/
 
 .intro{
     height: 100vh;
+    width: 100%;
     color: #F0F0F0;
     display: flex;
     flex-direction: column;
@@ -76,13 +98,25 @@ header a{
 
 .intro h2{
     font-size: 5em;
+    margin: 10px;
     text-transform: lowercase;
+    text-align: center;
+}
+
+@media(max-width: 600px){
+    .intro p{
+        font-size: 1em;
+    }
+    .intro h2{
+        font-size: 2em;
+    }
 }
 
 /*Projects Section*/
 
 .projects{
-    height: 110vh;
+    height: 100%;
+    min-height: 100vh;
     width: 100%;
     background-color: white;
     display: flex;
@@ -93,10 +127,19 @@ header a{
 
 .projects-card{
     width: 100%;
+    padding: 15px;
+    gap: 100px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+}
+
+@media(max-width: 900px){
+    .projects-card{
+        flex-direction: column;
+        gap: 20px;
+    }
 }
 
 /*Card Customization*/
@@ -138,16 +181,30 @@ header a{
     color: #0f0f0f;
 }
 
+@media(max-width: 900px){
+    .card{
+        width: 250px;
+        height: 300px;
+        font-size: 0.9em;
+    }
+}
+
 /*Individual Projects*/
 
 .card-void{
     background: url("imgs/blackHoleMod2.png");
 }
 
+.card-uefa{
+    background: url("imgs/UEFAmod.png");
+    background-position: top;
+}
+
 /*About section*/
 
 .about{
     height: 115vh;
+    width: 100%;
     background-color: #0f0f0f;
     gap: 40px;
     display: flex;
@@ -156,13 +213,20 @@ header a{
     justify-content: center;
 }
 
+.responsive-about-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 15px;
+}
+
 .about h2{
     color: white;
     text-transform: uppercase;
 }
 
 .perfil-temp{
-    width: 300px;
     height: 300px;
     border-radius: 50%;
     background-color: #f0f0f0;
@@ -188,10 +252,24 @@ blockquote::before{
     color: #19CFC9;
 }
 
+@media(max-width: 950px){
+    .perfil-temp{
+        height: 200px;
+    }
+}
+
+@media(max-width: 800px){
+    blockquote{
+        font-size: 0.8em;
+        width: 50%;
+    }
+}
+
 /*Contact section*/
 
 .contact{
     height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -246,6 +324,12 @@ blockquote::before{
     background: #f8f8f8;
     border: 1px solid #0f0f0f;
     border-radius: 10px;
+}
+
+@media(max-width: 600px){
+    #f-name-input, #f-email-input{
+        width: 300px;
+    }
 }
 
 #f-message-area{
