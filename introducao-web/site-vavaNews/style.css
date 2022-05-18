@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo&family=Koulen&display=swap');
+
+aside h5{
+    font-family: "Koulen", cursive;
+}
+
+/*Fix para remover um leve scroll horizontal na página*/
+.overflow-x-hidden{ 
+    overflow-x: hidden;
+}
+
+/*Mantém as imagens de perfil com o mesmo tamanho*/
+.colunistas-perfil{
+    height: 150px;
+}
+
+/*Customização do header*/
+header{
+    background-color: #FF4655;
+    color: white;
+    width: 100vw;
+}
+
+header nav a{
+    font-weight: bold;
+    color: #111111;
+    padding: 10px;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+
+header nav a:hover{
+    background-color: #111111;
+    color: #FF4655;
+}
+
+/*Corpo*/
+
+body{
+    background-color: #111111 !important;
+    color: #FFF !important;
+}
+
+/*Blocos de noticias*/
+
+.news-block article{
+    border: 1px solid #111;
+    transition: 1s ease-in-out;
+    padding: 15px !important;
+}
+
+.news-block article:hover{
+    border: 1px solid #FF4655;
+}
+
+.news-block article img{
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.news-block h6{
+    font-family: "Arimo", sans-serif;
+    font-weight: bold;
+}
+.news-block h6, aside h5{
+    color: #FF4655;
+    font-family: "Arimo", sans-serif;
+    font-weight: bold;
+}
+
+.news-block h3{
+    font-size: 1.5em;
+}
+
+footer{
+    background-color: #FF4655;
+}
+
+.bi-whatsapp{
+    position: relative;
+    bottom: 5px;
+    left: 10px;
+}
