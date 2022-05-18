@@ -17,33 +17,39 @@
 </head>
 
 <body class="overflow-x-hidden">
+    <!--Configurando o header-->
     <header class="container-fluid text-center mb-4">
         <div class="d-flex flex-row align-items-center justify-content-evenly">
             <nav class="navbar h5 d-none d-md-block">
                 <ul class="nav gap-5 align-items-center">
                     <li class="nav-item">
-                        <a href="" class="nav-list text-decoration-none">Mídia</a>
+                        <a href="#" class="nav-list text-decoration-none">Mídia</a>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-list text-decoration-none">Notícias</a>
+                        <a href="#" class="nav-list text-decoration-none">Notícias</a>
                     </li>
                     <li class="nav-item">
                         <img src="imgs/vava100.png" alt="">
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-list text-decoration-none">Placar</a>
+                        <a href="#" class="nav-list text-decoration-none">Placar</a>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-list text-decoration-none">Social</a>
+                        <a href="#" class="nav-list text-decoration-none">Social</a>
                     </li>
                 </ul>
             </nav>
+            <!--Imagem da logo para o header de telas pequenas-->
             <img src="imgs/vava100.png" alt="" class="d-sm-block d-md-none" loading="lazy">
         </div>
     </header>
+    <!--Conteúdo principal-->
     <main class="container-fluid pb-5 overflow-x-hidden">
+        <!--Criando as duas rows para o conteudo principal e o aside-->
         <div class="row">
+            <!-- #region Notícias principais-->
             <section class="news-block col-lg-8">
+                <!--Articles contendo as notícias-->
                 <article class="container-fluid h-auto pt-1 pb-2 m-2 align-items-center">
                     <div class="row">
                         <div class="col-md-7">
@@ -102,6 +108,8 @@
                     </div>
                 </article>
             </section>
+            <!-- #endregion -->
+            <!-- #region Section contendo as asides-->
             <aside class="col-lg-3 d-sm-none d-xs-none d-md-none d-lg-block m-1">
                 <section class="container-fluid d-flex flex-column justify-content-evenly">
                     <article class="container-fluid mb-3 mt-3 p-1 m-1">
@@ -162,10 +170,12 @@
                     </article>
                 </section>
             </aside>
+            <!-- #endregion -->
         </div>
     </main>
     <footer class="container-fluid h-25 p-2 ">
         <div class="row">
+            <!--#region Footer para telas de tamanho grande-->
             <div class="container-fluid d-flex align-items-center text-center d-none d-md-block">
                 <div class="d-flex flex-row align-items-center justify-content-center">
                     <div class="col-md-8">
@@ -197,6 +207,8 @@
                     </div>
                 </div>
             </div>
+            <!-- #endregion -->
+            <!-- #region Footer responsivo para telas pequenas-->
             <div class="d-flex align-items-center justify-content-center">
                 <div class="col-sm-6 col-xs-12">
                     <div
@@ -223,6 +235,7 @@
                     </div>
                 </div>
             </div>
+            <!--#endregion-->
         </div>
     </footer>
 </body>
