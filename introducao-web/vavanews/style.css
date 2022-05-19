@@ -45,13 +45,19 @@ body{
 
 .news-block article{
     border: 1px solid #111;
-    transition: 1s ease-in-out;
+    transition: 0.5s ease-in-out;
+    border-radius: 10px;
     padding: 15px !important;
 }
 
+/*Configuração do hover das notícias*/
+
 .news-block article:hover{
+    background-color: #000;
     border: 1px solid #FF4655;
 }
+
+/*Fazendo com que a imagem não passe do tamanho máximo do article*/
 
 .news-block article img{
     width: 100%;
@@ -64,6 +70,7 @@ body{
     font-family: "Arimo", sans-serif;
     font-weight: bold;
 }
+
 .news-block h6, aside h5{
     color: #FF4655;
     font-family: "Arimo", sans-serif;
@@ -74,7 +81,11 @@ body{
     font-size: 1.5em;
 }
 
+/*Arrumando footer*/
+
 footer{
+    color: #111;
+    font-weight: bold;
     background-color: #FF4655;
 }
 
