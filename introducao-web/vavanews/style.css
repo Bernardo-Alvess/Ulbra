@@ -25,8 +25,8 @@ header nav a{
     font-weight: bold;
     color: #111111;
     padding: 10px;
-    transition: 0.5s;
     border-radius: 10px;
+    transition: 0.5s;
 }
 
 header nav a:hover{
@@ -53,7 +53,7 @@ body{
 /*Configuração do hover das notícias*/
 
 .news-block article:hover{
-    background-color: #000;
+    background: #000;
     border: 1px solid #FF4655;
 }
 
