@@ -10,10 +10,10 @@ int main(){
         printf("Digite um numero: \n");
         scanf("%i%*c", &num);
         if(num > 0){
-            printf("Numero positivo");
+            printf("Numero positivo\n");
         }
         else if(num < 0){
-            printf("Numero negativo");
+            printf("Numero negativo\n");
         }
         else{
             break;
