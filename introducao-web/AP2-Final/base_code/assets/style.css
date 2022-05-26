@@ -1,0 +1,51 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.banner{
+    background: url("/images/banner.jpg") #000;
+    background-position: cover;
+    width: 100%;
+    height: 270px;
+}
+
+
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3em !important;
+    line-height: 2;
+}
+
+.menu{
+    background-color: cadetblue;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.principal h1{
+    margin: 5px;
+}
+
+.principal h2{
+    color: rgba(0, 0, 0, 0.541176);
+    font-size: 1.2em !important;
+    margin-top: 10px;
+    margin-bottom: 22px;
+}
+
+.conteudo{
+    width: 300px;
+    margin-top: 15px;
+    text-align: justify;
+}   
+
+.conteudo a{
+    text-decoration: none;
+}
+
+.conteudo a:hover{
+    text-decoration: underline;
+}
