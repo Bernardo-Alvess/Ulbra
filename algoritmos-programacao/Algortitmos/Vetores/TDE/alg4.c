@@ -4,7 +4,7 @@
 
 int main(){
 
-    int vetor[8];
+    int vetor[8], X, Y;
 
     for(int i = 0; i < 8; i++){
         printf("Digite um valor para a posicao %i\n", i + 1);
@@ -12,8 +12,18 @@ int main(){
     }
 
     do{
-        printf("Digite um valor ")
-    }
+        printf("Digite um valor para a posicao X: ");
+        scanf("%i%*c", &X);
+        printf("\nDigite um valor para a posicao Y: ");
+        scanf("%i%*c", &Y);
+
+        if(X > 8 || Y > 8 || X <= 0 || Y <= 0){
+            printf("Digite um numero menor que 8 ou maior que 0\n");
+        }
+
+    }while(X > 8 || Y > 8 || X <= 0 || Y <= 0);
+
+    printf("A soma de %i + %i = %i", vetor[X-1], vetor[Y-1], vetor[X-1] + vetor[Y-1]);
 
     return 0;
 }
