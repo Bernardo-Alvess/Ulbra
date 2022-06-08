@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../form-global.css">
+    <title>Consumo de Kwh</title>
+</head>
+<body>
+    <h1>Consumo de Kwh</h1>
+    <div class="form-container">
+        <form action="#" name="consumo-kwh">
+            <div>
+                <label for="consumo-casa">Consumo de Kwh da casa:</label>
+                <input type="number" name="consumo-casa" id="consumo-casa">
+            </div>
+            <div>
+                <label for="valor-kwh">Valor do Kwh</label>
+                <input type="number" name="valor-kwh" id="valor-kwh">
+            </div>
+            <button type="submit" onclick="calcularKwh()">Calcular Consumo</button>
+            <textarea name="valor-final" id="valor-final" cols="30" rows="5" readonly></textarea>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
