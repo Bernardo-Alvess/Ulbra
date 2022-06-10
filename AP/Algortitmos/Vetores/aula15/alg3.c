@@ -21,9 +21,9 @@ Verificar se:
 
 int main(){
 
-    int estoque[] = {1,2};
-    int codigo[] = {1,2};
-    int isCodeValid, code, codCliente, quantidadeItens;
+    int estoque[] = {10,20,30,40,50,60,70,80,90,100};
+    int codigo[] = {1,2,3,4,5,6,7,8,9,10};
+    int isCodeValid, code, codCliente, quantidadeItens, indexEstoque;
     
     do{
         printf("Codigo do cliente: ");
@@ -40,43 +40,43 @@ int main(){
 
                 //Verficando se o código existe dentro da array
 
-                for(int i = 0; i < 2; i++){
+                for(int i = 0; i < 10; i++){
                     if(code == codigo[i]){
+                        indexEstoque = i;
                         isCodeValid = 1;
-                        printf("oi\n");
+                        printf("Produto encontrado\n");
                         break;
                     }
                     else{
-                        printf("teste\n");
                         isCodeValid = 0;
                     }
                 }
 
-                for(int i = 0; i < 2; i++){
-                    if(isCodeValid == 1){
+                // for(int i = 0; i < 10; i++){
+                if(isCodeValid == 1){
 
-                        printf("Quantidade presente no estoque: %i\n", estoque[i]);
-                        printf("Qual a quantidade que voce deseja levar? ");
+                    printf("Quantidade presente no estoque: %i\n", estoque[indexEstoque]);
+                    printf("Qual a quantidade que voce deseja levar? ");
 
-                        scanf("%i%*c", &quantidadeItens);
-                        if(quantidadeItens > estoque[i]){
-                            printf("Não temos estoque suficente desta mercadoria\n");
-                        }
-                        else{
-                            estoque[i] -= quantidadeItens;
-                            printf("Pedido atendido. Obrigado, volte sempre\n");
-                        }
-                        break;
+                    scanf("%i%*c", &quantidadeItens);
+                    if(quantidadeItens > estoque[indexEstoque]){
+                        printf("Não temos estoque suficente desta mercadoria\n");
                     }
                     else{
-                        printf("Codigo inexistente\n");
+                        estoque[indexEstoque] -= quantidadeItens;
+                        printf("Pedido atendido. Obrigado, volte sempre\n");
                     }
+                    break;
                 }
+                else{
+                    printf("Codigo inexistente\n");
+                }
+                // }
             }while (isCodeValid == 0);
         }
     }while(codCliente != 0);
 
-    for(int i = 0; i < 2; i++){
+    for(int i = 0; i < 10; i++){
         printf("Produto: %i\n", codigo[i]);
         printf("Estoque: %i\n", estoque[i]);
         printf("-----------------------------------------\n");
