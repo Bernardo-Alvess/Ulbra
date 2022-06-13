@@ -7,10 +7,11 @@
 
 body{
     background-color: black;
-    display: flex;
+    display: flex;;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 20px;
     height: 100vh;
     color: #FFF;
 }
@@ -44,4 +45,19 @@ form div{
     display: flex;
     flex-direction: column;
     gap: 2px;
+}
+
+
+.return-btn{
+    padding: 30px;
+    border-radius: 50%;
+    border: 1px solid aqua;
+    color: aqua;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.return-btn:hover{
+    background-color: rgb(12, 12, 12);
 }

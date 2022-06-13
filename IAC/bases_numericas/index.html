@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Bases Numéricas</title>
+</head>
+<body>
+    <header>
+        <h1>Quick Conversion</h1>
+    </header>
+    <main>
+        <form action="#" name="conversionForm">
+            <div class="form-header-container">
+                <div>
+                    <label for="originalBase">From:</label>
+                    <select name="originalBase" id="originalBase">
+                        <option value="decimal">Decimal</option>
+                        <option value="binary" selected="selected">Binary</option>
+                        <option value="octal">Octal</option>
+                        <option value="hex">Hexadecimal</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="conversionBase">To:</label>
+                    <select name="conversionBase" id="conversionBase">
+                        <option value="decimal" selected="selected">Decimal</option>
+                        <!-- <option value="binary">Binary</option>
+                        <option value="octal">Octal</option>
+                        <option value="hex">Hexadecimal</option> -->
+                    </select>
+                </div>
+            </div>
+            <div>
+                <label for="numberInput">Enter number:</label>
+                <textarea name="numberInput" id="numberInput" cols="50" rows="5"></textarea>
+            </div>
+            <div>
+                <button type="submit" class="convertBtn">Convert</button>
+            </div>
+            <div>
+                <label for="convertedNumber">Converted number:</label>
+                <textarea name="convertedNumber" id="convertedNumber" cols="50" rows="5
+                " readonly></textarea>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <p>Mais conversões em breve</p>
+    </footer>
+    <script src="calculos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

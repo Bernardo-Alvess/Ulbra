@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semipresencial</title>
+</head>
+<body>
+    <!--#region Maior que 10-->
+    <div>
+        <h1>Maior que 10</h1>
+        <form action="#" name="maior_10">
+            <input type="number" id="txtMaior10" name="txtMaior10">
+            <button type="submit" id="btnMaior10">submit</button>
+        </form>
+    </div>
+    <!-- #endregion -->
+    <!--#region Soma de dois valores-->
+    <div>
+        <h1>Soma de dois Valores</h1>
+        <form action="#" name="soma_dois_valores">
+            <label for="number1">Número 1:</label>
+            <input type="number" name="number_1">
+            <label for="number2">Número 2:</label>
+            <input type="number" name="number_2">
+            <div>
+                <button type="submit">Calcular</button>
+            </div> 
+        </form>
+    </div>
+    <!--#endregion-->
+    <!--#region Calculadora Básica-->
+    <div>
+        <h1>Calculadora</h1>
+        <form action="#" name="calculadora_basica">
+            <div>
+                <label for="number1">Numero 1</label>
+                <input type="number" name="number_1" id="number_1">
+            </div>
+            <div>
+                <label for="numer2">Numero 2</label>
+                <input type="number" id="number_2" name="number_2">
+            </div>
+            <select name="operation" id="operation">
+                <option value="mais">+</option>
+                <option value="menos">-</option>
+                <option value="divisao">/</option>
+                <option value="multiplicar">*</option>
+            </select>
+            <button type="submit" onclick="calcular()">Calcular</button>
+        </form>
+    </div>
+    <!-- #endregion -->
+    <!--#region Nome várias vezes-->
+    <div>
+        <h1>Repetição de um nome usando laço o for</h1>
+        <form action="#" name="repetir_nome">
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome">
+            <label for="repetir">Quantas vezes repetir:</label>
+            <input type="number" name="repetir">
+            <button type="submit">Repetir</button>
+        </form>
+    </div>
+    <!--#endregion -->
+    <!--#region Dados pessoais-->
+    <div>
+        <h1>Dados pessoais</h1>
+        <form action="#" name="dados_pessoais">
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome">
+            <label for="email">E-mail:</label>
+            <input type="email" name="email">
+            <label for="endereco">Endereço:</label>
+            <input type="text" name="endereco">
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    <!-- #endregion -->
+    <script src="script.js"></script>
+</body>
+</html>

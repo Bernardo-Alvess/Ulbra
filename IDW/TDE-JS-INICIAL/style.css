@@ -58,3 +58,7 @@ section a:active{
     color: inherit;
     text-decoration: none;
 }
+
+h1{
+    font-size: 7em;
+}
