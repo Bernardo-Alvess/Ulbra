@@ -5,11 +5,9 @@ form.addEventListener('submit', (e) =>{
 
     const {originalBase, conversionBase, numberInput, convertedNumber} = form;
 
-    console.log(originalBase.value, conversionBase.value, numberInput.value)
-
     let orBase = 0;
     let cvBase = 0;
-    let numeroFinal = 0;
+    var numeroFinal;
 
     switch(originalBase.value){
         case 'binary':
@@ -42,8 +40,7 @@ form.addEventListener('submit', (e) =>{
     }
 
     if(cvBase === 10){
-        convertToDec(numberInput.value, orBase);
+        convertedNumber.value = convertToDec(numberInput.value, orBase);
     }
-
-    convertedNumber.value = numeroFinal;
+    
 })

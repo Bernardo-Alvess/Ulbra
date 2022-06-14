@@ -29,6 +29,7 @@ function cleanArray(arr, base){
                 }
                 else{
                     isInvalid = true;
+                    break;
                 }
                 break;
 
@@ -78,11 +79,11 @@ function cleanArray(arr, base){
 function convertToDec(num, base){
 
     let numero = num.toString();
-    let newArr = cleanArray(numero.toUpperCase().split(''), base);
+    let newArr = cleanArray(numero.toUpperCase().split(''), base); //a A f F
     let numeroFinal = 0;
     
-    if(newArr === true){
-        console.log("Número inválido para a base selecionada");
+    if(newArr){
+        alert("Número inválido para a base selecionada");
     }
     else{
         for(let i = 0; i < newArr.length; i++){
