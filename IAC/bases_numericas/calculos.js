@@ -82,7 +82,7 @@ function convertToDec(num, base){
     let newArr = cleanArray(numero.toUpperCase().split(''), base); //a A f F
     let numeroFinal = 0;
     
-    if(newArr){
+    if(newArr === true){
         alert("Número inválido para a base selecionada");
     }
     else{
