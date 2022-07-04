@@ -1,0 +1,27 @@
+.pokemonGameSection article h2{
+    color: #FEBF36;
+    border-bottom: 2px solid #cc992c;
+}
+
+.pokemonGameSection article{
+    background: #27282c;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px 0 10px 10px !important;
+}
+
+.pokemonGameSection a{
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+.pokemonGameSection p{
+    margin-top: 5px !important;
+    color: #FFF !important;
+}
+
+#pokemonAdsAside{
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-evenly !important;
+}

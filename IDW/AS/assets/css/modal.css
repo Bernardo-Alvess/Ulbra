@@ -1,0 +1,91 @@
+.myModal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: white;
+    width: 500px;
+    max-width: 80%;
+    transition: 200ms ease-in-out;
+    padding: 15px !important;
+}
+
+.myModal.active{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modalHeader{
+    padding: 10px 15px !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.modalHeader .title{
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.pokemonName{
+    text-transform: capitalize;
+}
+
+.modalHeader .closeButton{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.modalBody{
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalBody img{
+    width: 50%;
+}
+
+.modalStats{
+    display: flex;
+    flex-direction: column;
+    gap: 10px !important;
+}
+
+.modalStats div{
+    padding-bottom: 10px !important;
+    height: 100px;
+    max-height: 25%;
+    overflow-y: auto;
+}
+
+.modalStats div,
+.modalStats h2{
+    border-bottom: 1px solid black;
+}
+
+#overlay{
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+    transition: 200ms ease-in-out;
+}
+
+#overlay.active{
+    opacity: 1;
+    pointer-events: all;
+}

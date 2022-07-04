@@ -1,0 +1,24 @@
+.aboutContainer p,
+.aboutContainer li{
+    font-size: 1.2em !important;
+    text-align: justify !important;
+}
+
+.aboutContainer h1,
+.aboutContainer h2{
+    color: #FECA1B !important;
+}
+
+#modalCardStructure{
+    margin-top: 10px !important;
+}
+
+.aboutContainer ul{
+    padding-left: 2rem !important;
+}
+
+@media(max-width: 750px){
+    .textWhole{
+        width: 90% !important;
+    }
+}

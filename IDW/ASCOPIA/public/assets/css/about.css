@@ -1,0 +1,11 @@
+.aboutContainer p{
+    font-size: 1.2em;
+}
+
+.aboutContainer h1, h2{
+    color: #FECA1B !important;
+}
+
+#cardStructureText{
+    text-align: justify !important;
+}
