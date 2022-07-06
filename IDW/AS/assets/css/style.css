@@ -1,18 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 *{
     margin: 0 !important;
     padding: 0 !important;
     box-sizing: border-box;
-    font-family: "Helvetica", sans-serif;
 }
 
 body{
     background: #3C3E44;
+    font-family: 'Helvetica', sans-serif !important;
 }
 
 header{
     background: #2F2F2F;
     height: 10vh;
     width: 100% !important;
+    font-family: 'Press Start 2P', cursive !important;
 }
 
 #mainContent{
@@ -20,8 +23,19 @@ header{
 }
 
 footer{
-    height: 10vh;
     background: #2F2F2F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 10vh;
+}
+
+footer a{
+    transition: 0.5s;
+}
+
+footer a:hover{
+    color: #FEBF36 !important;
 }
 
 .pokemon-card{
@@ -36,12 +50,12 @@ footer{
     border-radius: 0.5rem;
     color: #FFF;
     cursor: pointer;
+    font-family: 'Press Start 2P', cursive !important;
 }
-
-
 
 .pokemon-card-title{
     text-transform: capitalize;
+    font-size: 1.2em;
 }
 
 .pokemon-card-text{

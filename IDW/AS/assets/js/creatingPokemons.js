@@ -132,7 +132,7 @@ async function openModal(){
             <img src="${pokemon.sprite}" alt="${pokemon.name}">
         </div>
         <div class="modalStats">
-            <h2>Movesets</h2>
+            <h2>Basic moves</h2>
             <div>
                 <h4>${moveset[0][0]}</h4>
                 <p>

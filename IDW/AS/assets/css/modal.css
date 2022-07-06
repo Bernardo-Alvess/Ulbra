@@ -3,14 +3,20 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
-    border: 1px solid black;
+    border: 1px solid #FFF;
     border-radius: 10px;
     z-index: 10;
     background-color: white;
     width: 500px;
     max-width: 80%;
+    max-height: 80%;
+    overflow-y: auto;
     transition: 200ms ease-in-out;
     padding: 15px !important;
+    background: #2F2F2F;
+    color: #FFF;
+    font-family: 'Press Start 2P', cursive !important;
+
 }
 
 .myModal.active{
@@ -22,12 +28,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #FFF;
 }
 
 .modalHeader .title{
-    font-size: 1.25rem;
-    font-weight: bold;
+    font-size: 1em;
 }
 
 .pokemonName{
@@ -39,8 +44,9 @@
     border: none;
     outline: none;
     background: none;
-    font-size: 1.25rem;
+    font-size: 1em;
     font-weight: bold;
+    color: #FFF;
 }
 
 .modalBody{
@@ -55,6 +61,13 @@
     width: 50%;
 }
 
+.modalStats h4{
+    font-size: 1.2em;
+}
+
+.modalStats p{
+    font-size: 0.8em;
+}
 .modalStats{
     display: flex;
     flex-direction: column;
@@ -63,14 +76,14 @@
 
 .modalStats div{
     padding-bottom: 10px !important;
-    height: 100px;
-    max-height: 25%;
+    height: 150px;
+    max-height: 30%;
     overflow-y: auto;
 }
 
 .modalStats div,
 .modalStats h2{
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #FFF;
 }
 
 #overlay{

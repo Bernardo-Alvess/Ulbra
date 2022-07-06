@@ -1,3 +1,4 @@
+
 .pokemonGameSection article h2{
     color: #FEBF36;
     border-bottom: 2px solid #cc992c;
@@ -24,4 +25,10 @@
     display: flex !important;
     flex-direction: column !important;
     justify-content: space-evenly !important;
+}
+
+@media(max-width: 1200px){
+    #pokemonAdsAside{
+        display: none !important;
+    }
 }
