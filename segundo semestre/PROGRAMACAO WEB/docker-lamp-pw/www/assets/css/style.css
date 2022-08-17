@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+}
+
+main{
+    height: 70vh;
+}
+
+main div{
+    height: 100%;
+}
+
+main section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+nav{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+footer{
+    height: 10vh;
+    background: rgb(148, 141, 141);
+}
+
