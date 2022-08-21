@@ -1,15 +1,17 @@
 <?php
-    if(!isset($_GET['controllers'])){
+    if(!isset($_GET['controller'])){
         require_once('controllers/SiteController.php');
         $SiteController = new SiteController();
         $SiteController -> home();
     }else{
-        switch($_REQUEST['controllers']){
+        switch($_REQUEST['controller']){
             case 'site':
+                require_once('controllers/SiteController.php');
+                $SiteController = new SiteController();
                 if(!isset($_GET['action'])){
                     $SiteController -> home();
                 }else{
-                    switch($_REQUEST('action')){
+                    switch($_REQUEST['action']){
                         case 'home':
                             $SiteController -> home();
                             break;
@@ -24,7 +26,7 @@
                             break;
                     }
                 }
-                break;  
+                break;
         }
     }
 ?>

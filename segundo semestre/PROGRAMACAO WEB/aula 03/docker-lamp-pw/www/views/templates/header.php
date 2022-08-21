@@ -17,16 +17,16 @@
             <nav class="container-fluid col-md-3 bg-secondary">
                 <ul>
                     <li>
-                        <a href="?action=home" class="text-white">Home</a>
+                        <a href="?controller=site&action=home" class="text-white">Home</a>
                     </li>
                     <li>
-                        <a href="?action=about" class="text-white">About</a>
+                        <a href="?controller=site&action=about" class="text-white">About</a>
                     </li>
                     <li>
-                        <a href="?action=products" class="text-white">Products</a>
+                        <a href="?controller=site&action=products" class="text-white">Products</a>
                     </li>
                     <li>
-                        <a href="?action=contact" class="text-white">Contatos</a>
+                        <a href="?controller=site&action=contact" class="text-white">Contatos</a>
                     </li>
                 </ul>
             </nav>
