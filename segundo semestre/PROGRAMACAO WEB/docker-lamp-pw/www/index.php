@@ -1,22 +1,47 @@
 <?php
-    include('templates/header.php');
-
-    if(isset($_GET['pages'])){
-        if($_GET['pages'] == 'home'){
-            include('pages/home.php');
-        }
-        elseif($_GET['pages'] == 'about'){
-            include('pages/about.php');
-        }
-        elseif($_GET['pages'] == 'products'){
-            include('pages/products.php');
-        }      
-        elseif($_GET['pages'] == 'contatos'){
-            include('pages/contatos.php');
-        }       
+    if(!isset($_GET['controller'])){
+        require_once('controllers/SiteController.php');
+        $SiteController = new SiteController();
+        $SiteController -> home();
     }else{
-        include('pages/home.php');
+        switch($_REQUEST['controller']){
+            case 'site':
+                require_once('controllers/SiteController.php');
+                $SiteController = new SiteController();
+                if(!isset($_GET['action'])){
+                    $SiteController -> home();
+                }else{
+                    switch($_REQUEST['action']){
+                        case 'home':
+                            $SiteController -> home();
+                            break;
+                        case 'about':
+                            $SiteController -> about();
+                            break;
+                        case 'products':
+                            $SiteController -> products();
+                            break;
+                        case 'contact':
+                            $SiteController -> contact();
+                            break;
+                    }
+                }
+                break;
+            case 'client':
+                require_once('controllers/ClientController.php');
+                $ClientController = new ClientController();
+                if(!isset($_GET['action'])){
+                    $client -> index();
+                }else{
+                    switch($_REQUEST['action']){
+                        case 'register':
+                            $ClientController -> register();
+                            break;
+                        case 'registerView':
+                            $ClientController -> registerView();
+                    }
+                }
+                break;
+        }
     }
-
-    include('templates/footer.php')
 ?>

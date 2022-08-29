@@ -14,20 +14,23 @@
     </header>
     <main class="container-fluid">
         <div class="row">
-            <nav class="container-fluid col-md-3 bg-secondary">
-                <ul>
+            <nav class="container-fluid col-md-3 bg-secondary d-flex flex-row justify-content-center align-items-center">
+                <ul class="list-unstyled">
                     <li>
-                        <a href="?pages=home" class="text-white">Home</a>
+                        <a href="?controller=site&action=home" class="text-white">Home</a>
                     </li>
                     <li>
-                        <a href="?pages=about" class="text-white">About</a>
+                        <a href="?controller=site&action=about" class="text-white">About</a>
                     </li>
                     <li>
-                        <a href="?pages=products" class="text-white">Products</a>
+                        <a href="?controller=site&action=products" class="text-white">Products</a>
                     </li>
                     <li>
-                        <a href="?pages=contatos" class="text-white">Contatos</a>
+                        <a href="?controller=site&action=contact" class="text-white">Contatos</a>
+                    </li>
+                    <li>
+                        <a href="?controller=client&action=register" class="text-white">Registro</a>
                     </li>
                 </ul>
             </nav>
-            <section class="col-md-9">
+            <section class="col-md-9 h-100">
