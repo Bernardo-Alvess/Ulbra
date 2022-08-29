@@ -14,8 +14,8 @@
     </header>
     <main class="container-fluid">
         <div class="row">
-            <nav class="container-fluid col-md-3 bg-secondary">
-                <ul>
+            <nav class="container-fluid col-md-3 bg-secondary d-flex flex-row justify-content-center align-items-center">
+                <ul class="list-unstyled">
                     <li>
                         <a href="?controller=site&action=home" class="text-white">Home</a>
                     </li>
@@ -33,4 +33,4 @@
                     </li>
                 </ul>
             </nav>
-            <section class="col-md-9">
+            <section class="col-md-9 h-100">

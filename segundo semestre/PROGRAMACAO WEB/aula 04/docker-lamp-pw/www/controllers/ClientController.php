@@ -17,13 +17,37 @@ class ClientController{
             $acceptView = 'Termo não aceito';
         }
 
+        if(isset($_POST['agreed'])){
+            $agreed = true;
+            $agreedView = 'Políticas aceitas';
+        }else{
+            $agreed = false;
+            $agreedView = 'Políticas não aceitas';
+        }
+
+        if(isset($_POST['robot'])){
+            $robot = true;
+            $robotView = 'Não é um robô';
+        }else{
+            $robot = false;
+            $robotView = 'BEEP BOOP';
+        }
+
         $arrayClient = array(
             'name' => $_POST['name'],
             'email' => $_POST['email'],
+            'password' => $_POST['password'],
+            'message' => $_POST['message'],
+            'options' => $_POST['options'],
+            'optionsVisible' => $_POST['optionsVisible'],
             'phone' => $_POST['phone'],
             'gender' => $_POST['gender'],
             'accept' => $accept,
-            'acceptView' => $acceptView
+            'acceptView' => $acceptView,
+            'agreed' => $agreed,
+            'agreedView' => $agreedView,
+            'robot' => $robot,
+            'robotView' => $robotView
         );
 
         require_once('views/templates/header.php');
