@@ -1,0 +1,15 @@
+body{
+    height: 100vh;
+}
+
+main{
+    height: 100%;
+}
+
+nav{
+    height: 100vh;
+}
+
+*{
+    box-sizing: border-box;
+}
