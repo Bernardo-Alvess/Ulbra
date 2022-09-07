@@ -39,6 +39,23 @@
                             break;
                         case 'registerView':
                             $ClientController -> registerView();
+                            break;
+                        case 'listClients':
+                            $ClientController -> listClients();
+                            break;
+                    }
+                }
+                break;
+            case 'items':
+                require_once('controllers/ProductController.php');
+                $ProductController = new ProductController();
+                if(!isset($_GET['action'])){
+                    
+                }else{
+                    switch($_REQUEST['action']){
+                        case 'listItems':
+                            $ProductController -> listProducts();
+                            break;
                     }
                 }
                 break;

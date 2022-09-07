@@ -31,6 +31,12 @@
                     <li>
                         <a href="?controller=client&action=register" class="text-white">Registro</a>
                     </li>
+                    <li>
+                        <a href="?controller=client&action=listClients" class="text-white">Listagem de Clientes</a>
+                    </li>
+                    <li>
+                        <a href="?controller=items&action=listItems" class="text-white">Listagem de produtos</a>
+                    </li>
                 </ul>
             </nav>
             <section class="col-md-9 h-100">
