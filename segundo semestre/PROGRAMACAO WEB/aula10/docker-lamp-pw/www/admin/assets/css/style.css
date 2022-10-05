@@ -1,0 +1,17 @@
+body{
+    height: 100vh;
+}
+
+nav{
+    background: #2a3f54;
+    color: #e7e7e7;
+}
+
+footer{
+    background: #2a3f54;
+    color: #e7e7e7;
+}
+
+*{
+    box-sizing: border-box;
+}
