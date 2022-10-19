@@ -5,8 +5,8 @@ $(document).ready(function () {
     createPokemonElement(1, numberOfPokemons);
 
     $('#showMore').click(() =>{
-        createPokemonElement(numberOfPokemons, numberOfPokemons + 20);
-        numberOfPokemons += 20;
+        createPokemonElement(numberOfPokemons, numberOfPokemons + 100);
+        numberOfPokemons += 100;
     })
 })
 
@@ -81,8 +81,7 @@ async function createPokemonElement(firstPokemon, lastPokemon) {
                         <p>DF: ${pokemon.defense}</p>
                     </div>
                 </div>
-            `
-                    
+            `      
         document.querySelector('.pokemonContent').innerHTML += pokemonDiv;
     }
 
