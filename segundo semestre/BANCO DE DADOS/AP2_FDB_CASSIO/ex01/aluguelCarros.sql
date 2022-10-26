@@ -18,9 +18,8 @@ create table carros(
 create table alugueis(
     id int primary key auto_increment,
     registro_aluguel int not null,
-    data_devolucao datetime not null,
-    data_aluguel datetime not null,
-    valor_total decimal(12,2),
+    data_devolucao date not null,
+    data_aluguel date not null,
     id_cliente int,
     constraint clientes_fk_alugueis
     foreign key(id_cliente) references clientes(id)
@@ -49,6 +48,30 @@ INSERT INTO clientes(nome, cpf, telefone, endereco)
         ('Francisco da Silva', '354041240', '55519996980', 'Peixaria Peixouto'),
         ('Lorenzo da Silva Silvão', '123456780', '555199995635', 'Arroio do Sal');
         
+INSERT INTO carros(placa_carro, modelo, cod_marca, ano, valor)
+	VALUES
+    	('ABCD123', 'Civic 2.0 LX CVT', 1, 2021, 122698.00),
+        ('XYZA123', 'New Fit LX 1.4 (flex)', 1, 2010, 38029.00);
+        
+insert into alugueis(registro_aluguel, data_devolucao, data_aluguel, id_cliente)
+	values
+    	(1234567891, '2022-09-10', '2022-09-20', 1),
+        (1234567231, '2022-02-10', '2022-03-10', 2);
+        
+insert into aluguel_carros(id_aluguel, id_carro)
+	VALUES
+    	(1, 1),
+        (1, 2),
+        (2, 1);
+        
+-- Quais clientes que tem silva no nome.
+
 select nome from clientes 
 	where nome like '%silva%'
     or nome like '%Silva%';
+    
+-- Quais carros foram locados no mês de setembro de 2021.
+select * from alugueis where MONTH(data_aluguel) = 09;
+
+-- Faça uma atualização para acrescentar 20% nos valores dos aluguéis.
+select modelo, valor*1.2 as valor_acrescido from carros;
