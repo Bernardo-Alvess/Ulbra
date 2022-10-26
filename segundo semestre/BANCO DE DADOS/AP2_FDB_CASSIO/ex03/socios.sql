@@ -37,7 +37,8 @@ insert into servicos(descricao, mes_referencia, valor_pago)
     VALUES
         ('Limpeza de piscina', '2020-01-10', 100.00),
         ('Limpeza de jardim', '2020-01-10', 150.00),
-        ('Conserto elétrico', '2021-02-15', 150.00);
+        ('Conserto elétrico', '2021-02-15', 150.00),
+        ('Limpeza Quântica', '2022-10-26', 550.00);
 
 insert into socios_pedem_servicos(id_socio, id_servico)
     values
@@ -46,3 +47,12 @@ insert into socios_pedem_servicos(id_socio, id_servico)
         (3, 3),
         (3, 2),
         (3, 1);
+
+-- Listar os serviços onde o valor pago é maior que 500.
+select * from servicos where valor_pago > 500;
+
+-- Listar os pedidos onde o mês de referência é janeiro de 2020.
+select * from servicos where month(mes_referencia) = 1;
+
+-- Listar os sócios que moram na rua que tem o nome Barão do Rio Branco.
+select * from socios where endereco like 'Barão do Rio Branco%';
