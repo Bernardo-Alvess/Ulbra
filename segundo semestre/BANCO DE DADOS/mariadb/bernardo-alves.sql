@@ -1,3 +1,5 @@
+create database fdb;
+
 create table editoras(
     id int primary key auto_increment,
     nome varchar(50)
