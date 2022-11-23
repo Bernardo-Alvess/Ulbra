@@ -60,7 +60,6 @@ insert into assuntos(id, descricao)
         ('R', 'REDES'),
         ('S', 'SISTEMAS OPERACIONAIS');
 
--- TODO ADICIONAR LINHAS PARA TESTE DE EXCLUSÄO DO BANCO DE DADOS DISTRIBUÍDO_
 insert into livros(id, titulo, preco, lancamento, idAssunto, idEditora)
     values
         (1, 'BANCO DE DADOS PARA A WEB', 31.20, '1999-01-10', 'B', 1),
@@ -68,17 +67,17 @@ insert into livros(id, titulo, preco, lancamento, idAssunto, idEditora)
         (3, 'PROGRAMANDO EM LINGUAGEM C++', 111.50, '1998-11-01', 'P', 3),
         (4, 'BANCO DE DADOS NA BIOINFORMATICA', 48.00, null, 'B', 2),
         (5, 'REDES DE COMPUTADORES', 42.00, '1996-09-01', 'R', 2),
-        (6, 'TESTE DE TESTE', 45.00, '2029-01-01', 'R', 2);
+        (6, 'BANCO DE DADOS DISTRIBUÍDO', 200, '2029-01-01', 'B', 2);
 
 
 insert into autores(matricula, nome, CPF, endereco, data_nascimento, nacionalidade)
     VALUES
-        (1, 'Rick Ryordan', '52036883389', 'Tangará da Serra, MT', '1965-05-08', 'Brasileiro'),
+        (1, 'Ana da Silva', '52036883389', 'Tangará da Serra, MT', '1965-05-08', 'Brasileiro'),
         (2, 'Matias Delipetro', '35318381057', 'Teresina, PI', '1970-02-03', 'Brasileiro'),
         (3, 'Thiago Elias', '53405707706', 'Uberlândia, MG', '2000-10-11', 'Brasileiro'),
         (4, 'Mark Oda', '', 'Colombus, OH', '1960-10-11', 'Americano'),
         (5, 'Marcos Marrocos', '', 'RIO DE JANEIRO, OH', '1960-10-11', 'Americano'),
-        (6, 'Fulano de Tal', '', '', NULL, 'Brasileiro');
+        (6, 'Rick Ryordan', '', '', NULL, 'Brasileiro');
 
 
 insert into autores_livros(matricula, idLivro)
@@ -97,7 +96,7 @@ from autores
 where nome like '%joão%';
 
 -- 3C Excluir o livro cujo título é ‘BANCO DE DADOS DISTRIBUÍDO’ ou ‘BANCOS DE DADOS DISTRIBUÍDOS’. Somente essas duas opções devem ser consideradas.
-delete from livros where titulo = 'BANCO DE DADOS DISTRIBUÍDO[S*]';
+delete from livros where titulo like 'BANCO DE DADOS DISTRIBUÍDO%';
 
 -- 3D Selecione o nome e o CPF de todos os autores que nasceram após 01 de janeiro de 1990.
 select nome, CPF
@@ -187,10 +186,29 @@ ORDER BY A.nome;
 
 
 -- 4E Monte a consulta SQL que retorna as editoras que publicaram livros escritos pela autora 'Ana da Silva'
-
+select E.nome, L.titulo, A.nome
+from autores_livros AL
+    inner join livros L
+        on L.id = AL.idLivro
+    inner join autores A
+        on A.matricula = AL.matricula
+    inner join editoras E
+        on E.id = L.idEditora
+having A.nome = 'Ana da Silva';
 
 -- 4F FUS (faça um SQL) que apresente o título do livro e o nome da editora que o publica para todos os livros que custam menos que 50 reais.
-
-
+select L.titulo, E.nome, L.preco
+from livros L
+    inner join editoras E
+        on L.idEditora = E.id
+having L.preco < 50;
 
 -- 4G FUS que apresente o CPF, nome do autor e o preço máximo dos livros de sua autoria. Apresente somente as informações para os autores cujo preço máximo for superior a 50.
+select A.CPF, A.nome, max(L.preco) as max_preço
+from autores_livros AL
+    inner join autores A
+        on A.matricula = AL.matricula
+    inner join livros L
+        on L.id = AL.idLivro
+group by AL.matricula
+having max_preço > 50;
