@@ -34,20 +34,20 @@
 						<a id="btnProducts" class="nav-link" href="<?=base_url('products')?>">Produtos e serviços</a>
 					</li>
 					<li class="nav-item">
-						<a id="btnContact" class="nav-link" href="<?=base_url('contacts')?>">Contatos</a>
+						<a id="btnContact" class="nav-link" href="<?=base_url('contact')?>">Contatos</a>
 					</li>
 				</ul>
 				<h3>Clientes</h3>
 				<ul class="nav flex-column">
-					<li class="nav-item">
+					<!-- <li class="nav-item">
 						<a id="" class="nav-link" href="?controller=client&action=register">Cadastro</a>
-					</li>
+					</li> -->
 					<li class="nav-item">
-						<a id="" class="nav-link" href="?controller=client&action=listClients">Lista de Contatos</a>
+						<a id="" class="nav-link" href="<?=base_url('listClients')?>">Lista de Clientes</a>
 					</li>
-					<li class="nav-item">
+					<!-- <li class="nav-item">
 						<a id="" class="nav-link" href="?controller=product&action=listProducts">Lista de Produtos</a>
-					</li>
+					</li> -->
 				</ul>
 			</nav>
 			<section class="col-md-9 p-5">

@@ -1,0 +1,317 @@
+CRITICAL - 2022-11-29 13:09:31 --> Class "app\Controllers\BaseController" not found
+in APPPATH/Controllers/Site.php on line 5.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(282): include_once()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH/Controllers/Site.php')
+ 3 SYSTEMPATH/Autoloader/Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Site')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Site')
+ 5 SYSTEMPATH/CodeIgniter.php(877): class_exists('\\App\\Controllers\\Site', true)
+ 6 SYSTEMPATH/CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-11-29 13:53:15 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /var/www/html/codeigniter4/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /var/www/html/codeigniter4/system/Database/MySQLi/Connection.php(171): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 /var/www/html/codeigniter4/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/codeigniter4/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/codeigniter4/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /var/www/html/codeigniter4/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/html/codeigniter4/system/BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 /var/www/html/codeigniter4/app/Controllers/Client.php(12): CodeIgniter\BaseModel->findAll()
+#7 /var/www/html/codeigniter4/system/CodeIgniter.php(927): App\Controllers\Client->listClients()
+#8 /var/www/html/codeigniter4/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client))
+#9 /var/www/html/codeigniter4/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /var/www/html/codeigniter4/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /var/www/html/codeigniter4/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /var/www/html/codeigniter4/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/codeigniter4/system/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/codeigniter4/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /var/www/html/codeigniter4/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 /var/www/html/codeigniter4/system/BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#5 /var/www/html/codeigniter4/app/Controllers/Client.php(12): CodeIgniter\BaseModel->findAll()
+#6 /var/www/html/codeigniter4/system/CodeIgniter.php(927): App\Controllers\Client->listClients()
+#7 /var/www/html/codeigniter4/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client))
+#8 /var/www/html/codeigniter4/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /var/www/html/codeigniter4/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-11-29 13:53:15 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 SYSTEMPATH/Database/BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `clients`', [], false)
+ 3 SYSTEMPATH/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Controllers/Client.php(12): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Client->listClients()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-29 14:23:18 --> Class "App\BaseController\BaseController" not found
+in APPPATH/Controllers/Contact.php on line 5.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(282): include_once()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH/Controllers/Contact.php')
+ 3 SYSTEMPATH/Autoloader/Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Contact')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Contact')
+ 5 SYSTEMPATH/CodeIgniter.php(877): class_exists('\\App\\Controllers\\Contact', true)
+ 6 SYSTEMPATH/CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-29 14:28:47 --> Class "App\Controllers\ContactModel" not found
+in APPPATH/Controllers/Contact.php on line 21.
+ 1 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Contact->sendContact()
+ 2 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contact))
+ 3 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-29 14:32:09 --> Class "App\Controllers\ContactModel" not found
+in APPPATH/Controllers/Contact.php on line 21.
+ 1 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Contact->sendContact()
+ 2 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contact))
+ 3 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-29 14:32:24 --> Class "App\Controllers\ContactModel" not found
+in APPPATH/Controllers/Contact.php on line 21.
+ 1 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Contact->sendContact()
+ 2 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contact))
+ 3 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-29 14:32:30 --> Class "App\Controllers\ContactModel" not found
+in APPPATH/Controllers/Contact.php on line 21.
+ 1 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Contact->sendContact()
+ 2 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contact))
+ 3 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-29 14:33:18 --> Allowed fields must be specified for model: App\Models\ContactModel
+in SYSTEMPATH/BaseModel.php on line 1160.
+ 1 SYSTEMPATH/BaseModel.php(1160): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\ContactModel')
+ 2 SYSTEMPATH/BaseModel.php(724): CodeIgniter\BaseModel->doProtectFields([...])
+ 3 SYSTEMPATH/Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 4 APPPATH/Controllers/Contact.php(23): CodeIgniter\Model->insert([...])
+ 5 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Contact->sendContact()
+ 6 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contact))
+ 7 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-11-29 14:34:16 --> mysqli_sql_exception: Column 'message' cannot be null in /var/www/html/codeigniter4/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /var/www/html/codeigniter4/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO `co...', 0)
+#1 /var/www/html/codeigniter4/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `co...')
+#2 /var/www/html/codeigniter4/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `co...')
+#3 /var/www/html/codeigniter4/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `co...', Array, false)
+#4 /var/www/html/codeigniter4/system/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/html/codeigniter4/system/BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 /var/www/html/codeigniter4/system/Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 /var/www/html/codeigniter4/app/Controllers/Contact.php(23): CodeIgniter\Model->insert(Array)
+#8 /var/www/html/codeigniter4/system/CodeIgniter.php(927): App\Controllers\Contact->sendContact()
+#9 /var/www/html/codeigniter4/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contact))
+#10 /var/www/html/codeigniter4/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /var/www/html/codeigniter4/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-11-29 14:34:16 --> Column 'message' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO `contacts` (`name`, `email`, `message`) VALUES (\'Bernardo\', \'bet@gmail.com\', NULL)', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `contacts` (`name`, `email`, `message`) VALUES (\'Bernardo\', \'bet@gmail.com\', NULL)')
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `contacts` (`name`, `email`, `message`) VALUES (\'Bernardo\', \'bet@gmail.com\', NULL)')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `contacts` (`name`, `email`, `message`) VALUES (:name:, :email:, :message:)', [...], false)
+ 5 SYSTEMPATH/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH/Controllers/Contact.php(23): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Contact->sendContact()
+10 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contact))
+11 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-11-29 14:34:31 --> mysqli_sql_exception: Column 'message' cannot be null in /var/www/html/codeigniter4/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /var/www/html/codeigniter4/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO `co...', 0)
+#1 /var/www/html/codeigniter4/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `co...')
+#2 /var/www/html/codeigniter4/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `co...')
+#3 /var/www/html/codeigniter4/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `co...', Array, false)
+#4 /var/www/html/codeigniter4/system/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/html/codeigniter4/system/BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 /var/www/html/codeigniter4/system/Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 /var/www/html/codeigniter4/app/Controllers/Contact.php(23): CodeIgniter\Model->insert(Array)
+#8 /var/www/html/codeigniter4/system/CodeIgniter.php(927): App\Controllers\Contact->sendContact()
+#9 /var/www/html/codeigniter4/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contact))
+#10 /var/www/html/codeigniter4/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /var/www/html/codeigniter4/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-11-29 14:34:31 --> Column 'message' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO `contacts` (`name`, `email`, `message`) VALUES (\'Bernardo\', \'bet@gmail.com\', NULL)', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `contacts` (`name`, `email`, `message`) VALUES (\'Bernardo\', \'bet@gmail.com\', NULL)')
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `contacts` (`name`, `email`, `message`) VALUES (\'Bernardo\', \'bet@gmail.com\', NULL)')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `contacts` (`name`, `email`, `message`) VALUES (:name:, :email:, :message:)', [...], false)
+ 5 SYSTEMPATH/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH/Controllers/Contact.php(23): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Contact->sendContact()
+10 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contact))
+11 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-11-29 14:34:50 --> mysqli_sql_exception: Column 'message' cannot be null in /var/www/html/codeigniter4/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /var/www/html/codeigniter4/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO `co...', 0)
+#1 /var/www/html/codeigniter4/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `co...')
+#2 /var/www/html/codeigniter4/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `co...')
+#3 /var/www/html/codeigniter4/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `co...', Array, false)
+#4 /var/www/html/codeigniter4/system/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/html/codeigniter4/system/BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 /var/www/html/codeigniter4/system/Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 /var/www/html/codeigniter4/app/Controllers/Contact.php(23): CodeIgniter\Model->insert(Array)
+#8 /var/www/html/codeigniter4/system/CodeIgniter.php(927): App\Controllers\Contact->sendContact()
+#9 /var/www/html/codeigniter4/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contact))
+#10 /var/www/html/codeigniter4/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /var/www/html/codeigniter4/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-11-29 14:34:50 --> Column 'message' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO `contacts` (`name`, `email`, `message`) VALUES (\'Bernardo\', \'bet@gmail.com\', NULL)', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `contacts` (`name`, `email`, `message`) VALUES (\'Bernardo\', \'bet@gmail.com\', NULL)')
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `contacts` (`name`, `email`, `message`) VALUES (\'Bernardo\', \'bet@gmail.com\', NULL)')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `contacts` (`name`, `email`, `message`) VALUES (:name:, :email:, :message:)', [...], false)
+ 5 SYSTEMPATH/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH/Controllers/Contact.php(23): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Contact->sendContact()
+10 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contact))
+11 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-11-29 14:34:54 --> mysqli_sql_exception: Column 'message' cannot be null in /var/www/html/codeigniter4/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /var/www/html/codeigniter4/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO `co...', 0)
+#1 /var/www/html/codeigniter4/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `co...')
+#2 /var/www/html/codeigniter4/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `co...')
+#3 /var/www/html/codeigniter4/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `co...', Array, false)
+#4 /var/www/html/codeigniter4/system/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/html/codeigniter4/system/BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 /var/www/html/codeigniter4/system/Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 /var/www/html/codeigniter4/app/Controllers/Contact.php(23): CodeIgniter\Model->insert(Array)
+#8 /var/www/html/codeigniter4/system/CodeIgniter.php(927): App\Controllers\Contact->sendContact()
+#9 /var/www/html/codeigniter4/system/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contact))
+#10 /var/www/html/codeigniter4/system/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /var/www/html/codeigniter4/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-11-29 14:34:54 --> Column 'message' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO `contacts` (`name`, `email`, `message`) VALUES (\'Bernardo\', \'bet@gmail.com\', NULL)', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `contacts` (`name`, `email`, `message`) VALUES (\'Bernardo\', \'bet@gmail.com\', NULL)')
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `contacts` (`name`, `email`, `message`) VALUES (\'Bernardo\', \'bet@gmail.com\', NULL)')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `contacts` (`name`, `email`, `message`) VALUES (:name:, :email:, :message:)', [...], false)
+ 5 SYSTEMPATH/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH/Controllers/Contact.php(23): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Contact->sendContact()
+10 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contact))
+11 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-29 15:44:25 --> The namespace delimiter is a backslash (\), not a slash (/). Route handler: \App\Controllers\Admin/User::validateLogin
+in SYSTEMPATH/Router/Router.php on line 466.
+ 1 SYSTEMPATH/Router/Router.php(466): CodeIgniter\Router\Exceptions\RouterException::forInvalidControllerName('\\App\\Controllers\\Admin/User::validateLogin')
+ 2 SYSTEMPATH/Router/Router.php(181): CodeIgniter\Router\Router->checkRoutes('admin/validateLogin')
+ 3 SYSTEMPATH/CodeIgniter.php(802): CodeIgniter\Router\Router->handle('admin/validateLogin')
+ 4 SYSTEMPATH/CodeIgniter.php(430): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-29 15:57:22 --> syntax error, unexpected token "if"
+in APPPATH/Config/Routes.php on line 72.
+ 1 SYSTEMPATH/CodeIgniter.php(430): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 2 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-29 16:18:03 --> Undefined variable $client
+in APPPATH/Views/admin/contacts/listContacts.php on line 16.
+ 1 APPPATH/Views/admin/contacts/listContacts.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $client', 'APPPATH/Views/admin/contacts/listContacts.php', 16)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/contacts/listContacts.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('admin/contacts/listContacts', [], true)
+ 5 APPPATH/Controllers/Admin/Contacts.php(18): view('admin/contacts/listContacts', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Admin\Contacts->listContacts()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Contacts))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-29 16:18:32 --> Undefined array key "Message"
+in APPPATH/Views/admin/contacts/listContacts.php on line 25.
+ 1 APPPATH/Views/admin/contacts/listContacts.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Message"', 'APPPATH/Views/admin/contacts/listContacts.php', 25)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/contacts/listContacts.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('admin/contacts/listContacts', [], true)
+ 5 APPPATH/Controllers/Admin/Contacts.php(18): view('admin/contacts/listContacts', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Admin\Contacts->listContacts()
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Contacts))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-29 16:50:10 --> Undefined property: App\Controllers\Contact::$load
+in APPPATH/Controllers/Contact.php on line 17.
+ 1 APPPATH/Controllers/Contact.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Contact::$load', 'APPPATH/Controllers/Contact.php', 17)
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Contact->sendContact()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contact))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-29 17:40:52 --> base_url(): Argument #2 ($scheme) must be of type ?string, array given, called in /var/www/html/codeigniter4/app/Controllers/Admin/User.php on line 36
+in SYSTEMPATH/Helpers/url_helper.php on line 100.
+ 1 APPPATH/Controllers/Admin/User.php(36): base_url('/admin/login', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Admin\User->validateLogin()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-29 17:41:30 --> Invalid file: /admin/login.php
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 33.
+ 1 SYSTEMPATH/View/View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/admin/login.php')
+ 2 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('/admin/login', [], true)
+ 3 APPPATH/Controllers/Admin/User.php(36): view('/admin/login', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Admin\User->validateLogin()
+ 5 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 6 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-29 17:41:47 --> Invalid file: /login.php
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 33.
+ 1 SYSTEMPATH/View/View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/login.php')
+ 2 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('/login', [], true)
+ 3 APPPATH/Controllers/Admin/User.php(36): view('/login', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Admin\User->validateLogin()
+ 5 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 6 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-29 17:41:51 --> Invalid file: /login.php
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 33.
+ 1 SYSTEMPATH/View/View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/login.php')
+ 2 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('/login', [], true)
+ 3 APPPATH/Controllers/Admin/User.php(36): view('/login', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Admin\User->validateLogin()
+ 5 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 6 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-29 17:52:12 --> Undefined variable $arrayClient
+in APPPATH/Views/admin/client/updateClient.php on line 3.
+ 1 APPPATH/Views/admin/client/updateClient.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $arrayClient', 'APPPATH/Views/admin/client/updateClient.php', 3)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/client/updateClient.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1134): CodeIgniter\View\View->render('admin/client/updateClient', [], true)
+ 5 APPPATH/Controllers/Admin/Client.php(71): view('admin/client/updateClient', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Admin\Client->updateClientAction('16')
+ 7 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Client))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-29 18:12:14 --> Too few arguments to function App\Controllers\Admin\Client::insertClient(), 0 passed in /var/www/html/codeigniter4/system/CodeIgniter.php on line 927 and exactly 1 expected
+in APPPATH/Controllers/Admin/Client.php on line 21.
+ 1 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Admin\Client->insertClient()
+ 2 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Client))
+ 3 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-29 18:13:04 --> view(): Argument #2 ($data) must be of type array, null given, called in /var/www/html/codeigniter4/app/Controllers/Admin/Client.php on line 23
+in SYSTEMPATH/Common.php on line 1120.
+ 1 APPPATH/Controllers/Admin/Client.php(23): view('admin/client/insertClient', null)
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Admin\Client->insertClient()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Client))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-29 18:14:35 --> Call to undefined function App\Controllers\Admin\insertClient()
+in APPPATH/Controllers/Admin/Client.php on line 47.
+ 1 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Admin\Client->insertClientAction()
+ 2 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Client))
+ 3 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
