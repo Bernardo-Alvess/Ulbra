@@ -15,7 +15,7 @@ public class Turma {
             soma += alunoItem.getMedia();
         }
 
-        media = soma / 3;
+        media = soma / this.alunos.length;
     }
 
     public double getMedia(){
