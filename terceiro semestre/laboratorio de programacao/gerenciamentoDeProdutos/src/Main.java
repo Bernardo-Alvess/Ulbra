@@ -4,12 +4,15 @@ public class Main {
         Produto mouse = new Produto("Logitech G403", 250, 10);
         Produto monitor = new Produto("Monitor Ozone 144hz 24' 4k", 1500, 4);
         Produto teclado = new Produto("Redragon Fizz k617", 350, 2);
+        Produto teclado2 = new Produto("Redragon Fizz k617", 350, 2);
+
 
         Loja kabum = new Loja();
 
         kabum.adicionarProduto(mouse);
         kabum.adicionarProduto(monitor);
         kabum.adicionarProduto(teclado);
+        kabum.adicionarProduto(teclado2);
 
         kabum.listarProdutos();
 
@@ -18,6 +21,8 @@ public class Main {
 
         kabum.removerProduto(teclado);
         kabum.venderProduto(teclado, 2);
+
+        kabum.venderProduto(mouse, 1);
     }
 
 }

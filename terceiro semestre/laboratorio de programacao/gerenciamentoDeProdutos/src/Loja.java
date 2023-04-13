@@ -8,11 +8,11 @@ public class Loja {
         //String prodNome = produto.getNome();
         boolean produtoExiste = false;
         if(produto1 == produto){
-            produtoExiste = true;
+            return produtoExiste = true;
         } else if (produto2 == produto) {
-            produtoExiste = true;
+            return produtoExiste = true;
         } else if(produto3 == produto){
-            produtoExiste = true;
+            return produtoExiste = true;
         }
         return produtoExiste;
     }
@@ -28,7 +28,7 @@ public class Loja {
                 System.err.println("A loja esta com o máximo de produtos permitidos\n");
             }
         }else{
-            System.out.println("Produto duplicado, inserção não ocorrida\n");
+            System.err.println("Produto duplicado, inserção não ocorrida\n");
         }
     }
 
@@ -37,7 +37,7 @@ public class Loja {
         if(this.existeProduto(produto)){
             if(produto1 == produto){
                 produto1 = null;
-            }else if (produto == produto){
+            }else if (produto2 == produto){
                 produto2 = null;
             }else{
                 produto3 = null;
@@ -66,7 +66,7 @@ public class Loja {
                 System.out.printf("O produto '%s' possui %d unidades em estoque\n", produto.getNome(), qtdProduto);
             }
         }else{
-            System.err.println("Produto não existe ou quantidade informada é igual a 0\n");
+            System.err.printf("Produto '%s' não existe ou quantidade informada é igual a 0\n", produto.getNome());
         }
     }
 
