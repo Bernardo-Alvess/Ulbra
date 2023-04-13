@@ -8,7 +8,8 @@ INSERT INTO clientes (nome, CPF, numero_telefone) VALUES
 ('Rafaela Oliveira', '77788899900', '11444443333'),
 ('Gustavo Pereira', '88899900011', '11333332222'),
 ('Fernanda Almeida', '99900011122', '11222221111'),
-('Marcos Santos', '00011122233', '11111110000');
+('Marcos Santos', '00011122233', '11111110000'),
+('Will Smith', '00011122253', '11987654321');
 
 INSERT INTO autores (nome) VALUES
 ('Machado de Assis'),
@@ -100,33 +101,24 @@ INSERT INTO alugueis (id_cliente, data_saida) VALUES
 (10, '2022-01-08'),
 (9, '2022-02-23');
 
-INSERT INTO aluguel_livros (id_livro, id_aluguel) VALUES 
-(1, 1),
-(2, 2),
-(3, 3),
-(4, 4),
-(5, 5),
-(1, 2),
-(6, 6),
-(8, 6),
-(5, 6),
-(7, 7),
-(10, 7),
-(8, 8),
-(9, 9),
-(1, 10),
-(9, 10),
-(10, 10);
+INSERT INTO aluguel_livros (id_livro, id_aluguel, preco) VALUES 
+(1, 1, 29.90),
+(2, 2, 53.00),
+(3, 3, 30.00),
+(4, 4, 25.00),
+(5, 5, 45.00),
+(1, 2, 60.00),
+(6, 6, 50.00),
+(8, 6, 20.00),
+(5, 6, 45.00),
+(7, 7, 27.50),
+(10, 7, 45.00),
+(8, 8, 20.00),
+(9, 9, 20.00),
+(1, 10, 25.00),
+(9, 10, 17.50),
+(10, 10, 45.00);
 
-select * from aluguel_livros where id_livro = 2 || id_livro = 3 || id_livro = 8 || id_livro = 9 || id_livro = 1
-order by id_livro 
-
-
-2 codigo davinci
-3 harry potter
-8 dom casmurro
-9 o cortiço
-1 a cabana
 INSERT INTO editora_livros (id_livro, id_editora) VALUES 
 (1, 1),
 (2, 2),
