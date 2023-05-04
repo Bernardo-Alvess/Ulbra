@@ -28,7 +28,8 @@ FROM livros_generos lg
 GROUP BY g.nome
 ORDER BY quantidade_vendida DESC;
 
-select * from quantidade_vendidadas_livros_genero;
+select * from quantidade_vendidadas_livros_genero q
+where q.quantidade_vendida > 3;
 
 -- mostrar 
 select l.titulo, GROUP_CONCAT(g.nome SEPARATOR ', ') as generos

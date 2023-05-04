@@ -15,7 +15,7 @@ BEGIN
 END//
 DELIMITER ;
 
-call buscarInfoAluguelPorCPF('04448991032');
+call buscarInfoAluguelPorCPF('45678912301');
 
 -- Inserir Cliente
 DELIMITER //
@@ -27,7 +27,7 @@ BEGIN
 END//
 DELIMITER ;
 
-call inserirCliente('Bernardo Alves', '12345678932', '111111111111');
+call inserirCliente('Bernardo Alves', '12345678932', '11111111111');
 
 -- Atualizar preço de livro
 DELIMITER //
@@ -39,7 +39,8 @@ BEGIN
 END//
 DELIMITER ;
 
-call atualizarPrecoLivro(1, 50);
+call atualizarPrecoLivro(2, 29);
+select * from livros where id = 2;
 
 -- Buscar livros por genero
 
