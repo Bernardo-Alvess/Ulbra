@@ -1,4 +1,5 @@
 create database teste;
+use teste;
 
 CREATE TABLE setores
 (
@@ -66,3 +67,12 @@ insert into funcionarios  (id, nome, salario, id_setor)
 	values (1, 'Bernardo', 3000, 4), (2 ,'Bryan', 4000, 6);
     
 select * from setores
+
+DELIMITER //
+start transaction;
+
+insert into setores(nome) values('devops');
+insert into funcionarios(nome, salario, id_setor) values('João Silva', 4000, 7);
+
+commit;
+DELIMITER;
