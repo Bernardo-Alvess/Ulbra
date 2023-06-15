@@ -1,0 +1,24 @@
+1 - Crie um novo banco de dados chamado "SchoolDB" e, dentro dele, uma coleção chamada "Students". Inclua os seguintes campos nos documentos desta coleção: "firstName", "lastName", "age" e "grade". Insira pelo menos três documentos com dados fictícios.
+
+use SchoolDB
+
+db.Students.insertOne({"firstName": "Bernardo", "lastName": "Alves", "age": 20, "grade": 8})
+db.Students.insertOne({"firstName": "Lorenzo", "lastName": "Cardoso", "age": 21, "grade": 7})
+db.Students.insertOne({"firstName": "Faw", "lastName": "Six", "age": 19, "grade": 8})
+
+2 - Crie uma consulta para exibir todos os estudantes que têm mais de 15 anos na coleção "Students".
+
+db.Students.find({age: {$gt: 15}})
+
+3 - Atualize a idade de um dos estudantes que você criou no exercício 1. Confirme se a alteração foi feita com sucesso realizando uma nova consulta.
+
+db.Students.updateOne({"firstName": "Faw"}, {$set: {"age": 21}})
+
+4 - Exclua um dos documentos da coleção "Students". Novamente, confirme se a operação foi bem sucedida através de uma nova consulta.
+
+db.Students.deleteOne({"firstName": "Faw"})
+db.Studens.find({"firstName": "Faw"})
+
+5 - Crie uma nova coleção chamada "Courses". Cada documento dessa coleção deve ter os campos "courseName" e "teacherName". Além disso, crie um array "students" para representar os estudantes matriculados no curso. Cada item desse array deve ser um objeto com os campos "firstName" e "lastName". Adicione pelo menos um documento a esta coleção e inclua alguns estudantes no array.
+
+db.Courses.insertOne({"courseName": "Banco de Dados", "teacherName": "Cássio", "students": [{"firstName": "Marcos", "lastName": "Colon"}, {"firstName": "Bernardo", "lastName": "Alves"}]})

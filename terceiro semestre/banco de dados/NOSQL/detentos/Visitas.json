@@ -1,0 +1,9 @@
+{
+    "_id": "visita1",
+    "DetentoID": "detento1",
+    "VisitanteID": "visitante1",
+    "DataVisita": "2023-06-14",
+    "HoraEntrada": "14:30",
+    "HoraSaida": "15:30"
+}
+  
