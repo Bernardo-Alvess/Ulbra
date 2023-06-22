@@ -27,25 +27,25 @@ public class Main {
 
         Zoo zoo = new Zoo(3, 5);
 
-        zoo.adicionarAnimal(tartaruga);
-        zoo.adicionarAnimal(papagaio);
-        zoo.adicionarAnimal(cachorro);
-        zoo.adicionarAnimal(cachorro);
-        zoo.adicionarAnimal(cachorro);
-        zoo.adicionarAnimal(cachorro);
-        zoo.adicionarAnimal(cachorro);
+        zoo.adicionar(tartaruga);
+        zoo.adicionar(papagaio);
+        zoo.adicionar(cachorro);
+        zoo.adicionar(cachorro);
+        zoo.adicionar(cachorro);
+        zoo.adicionar(cachorro);
+        zoo.adicionar(cachorro);
 
 
-        zoo.adicionarFuncionario(veterinario1);
-        zoo.adicionarFuncionario(veterinario2);
-        zoo.adicionarFuncionario(veterinario3);
-        zoo.adicionarFuncionario(funcionario1);
-        zoo.adicionarFuncionario(funcionario2);
-        zoo.adicionarFuncionario(funcionario2);
-        zoo.adicionarFuncionario(funcionario2);
-        zoo.adicionarFuncionario(funcionario2);
-        zoo.adicionarFuncionario(funcionario2);
-        zoo.adicionarFuncionario(funcionario2);
+        zoo.adicionar(veterinario1);
+        zoo.adicionar(veterinario2);
+        zoo.adicionar(veterinario3);
+        zoo.adicionar(funcionario1);
+        zoo.adicionar(funcionario2);
+        zoo.adicionar(funcionario2);
+        zoo.adicionar(funcionario2);
+        zoo.adicionar(funcionario2);
+        zoo.adicionar(funcionario2);
+        zoo.adicionar(funcionario2);
 
     }
 }
