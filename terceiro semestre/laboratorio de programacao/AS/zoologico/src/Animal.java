@@ -1,9 +1,12 @@
+//A classe Animal representa um animal do zoológico, serve de superclass para Ave e Mamifero
 public class Animal {
+    //Atributos da classe
     private String nome;
     private int idade;
     private double peso;
     private String especie;
 
+    //Construtor da classe
     public Animal(String nome, int idade, double peso, String especie){
         this.nome = nome;
         this.idade = idade;
@@ -11,6 +14,7 @@ public class Animal {
         this.especie = especie;
     }
 
+    //Métodos get e set
     public String getNome() {
         return nome;
     }
@@ -43,10 +47,11 @@ public class Animal {
         this.especie = especie;
     }
 
+    //Método moviventar() realiza o movimento do animal
     public void movimentar(){
         System.out.printf("%s (%s) se moveu\n", this.especie, this.nome);
     }
-
+    //Método movimentar(String movimento) realiza o movimento do animal de forma específica, somente se um parâmetro for passado na função
     public void movimentar(String movimento){
         System.out.printf("%s (%s) se moveu de forma específica - Ação feita: %s\n", this.especie, this.nome, movimento);
     }

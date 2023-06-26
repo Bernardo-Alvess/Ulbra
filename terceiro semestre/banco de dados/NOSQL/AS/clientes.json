@@ -1,7 +1,6 @@
 {
     "_id": 1,
     "nome": "Bernardo Alves",
-    "CPF": "04441128934",
     "enderecos": [
         {
             "rua": "Rua 123",
@@ -15,4 +14,17 @@
         }
     ],
     "telefones": ["51923664988", "51928524157", "51938894586"]
+}
+
+{
+    "_id": 2,
+    "nome": "virso",
+    "enderecos": [
+        {
+            "rua": "Anormal",
+            "bairro": "estranhos",
+            "numero": 69
+        }
+    ],
+    "telefones": ["51985881205"]
 }
