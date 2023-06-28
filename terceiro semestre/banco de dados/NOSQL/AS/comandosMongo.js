@@ -2,7 +2,7 @@
 
 //Criação das collections e os inserts
 db.createCollection("clientes");
-db.clientes.insertOne({
+var clientesArray = [{
     "_id": 1,
     "nome": "Bernardo Alves",
     "enderecos": [
@@ -18,7 +18,20 @@ db.clientes.insertOne({
         }
     ],
     "telefones": ["51923664988", "51928524157", "51938894586"]
-});
+},
+{
+    "_id": 2,
+    "nome": "virso",
+    "enderecos": [
+        {
+            "rua": "Anormal",
+            "bairro": "estranhos",
+            "numero": 69
+        }
+    ],
+    "telefones": ["51985881205"]
+}]
+db.clientes.insertMany(clientesArray)
 
 db.createCollection("itens")
 var itensArray = [
@@ -137,7 +150,7 @@ db.itens.find(
 
 //query que retorna os pedidos com valor total maior que 300
 db.pedidos.find(
-    {"valorTotal": {$gt:  300}}
+    {"valorTotal": {$gt: 300}}
 )
 
 //query que retorna uma lista com os nomes dos clientes juntamente de quanto eles gastaram
