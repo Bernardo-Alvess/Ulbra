@@ -11,4 +11,16 @@ def verificaNumeros(lista):
             print(f'{i} é um valor inválido')
     return valoresValidos
 
-print(verificaNumeros(lista))
+def minMax(lista):
+    min = lista[0]
+    max = lista[0]
+
+    for i in lista:
+        if i < min:
+            min = i
+        if i > max:
+            max = i
+    return min, max
+
+numeros = verificaNumeros(lista)
+print(minMax(numeros))
