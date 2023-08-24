@@ -9,11 +9,7 @@ class Neuronio:
         self.output = output
 
     def soma_ponderada(self):
-        count = 0
-        for w in self.weights:
-            #print(f'input = {self.inputs[count]}')
-            s = (self.inputs[count] * self.weights[count])  
-            count += 1
+        s = (self.inputs[0] * self.weights[0]) + (self.inputs[1] * self.weights[1])
         return s
     
     def func_rampa(self):
@@ -39,3 +35,4 @@ while ajustes != 0:
         ajustes += 1
         neuronio.weights = neuronio.ajuste_sinaptico(valor_rampa)
         print(neuronio.weights, neuronio.inputs)
+        print(f'Valor saida = {valor_rampa}')
