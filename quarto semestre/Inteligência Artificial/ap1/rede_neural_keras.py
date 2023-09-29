@@ -14,8 +14,9 @@ y_treino, y_teste = y[0:300],  y[300:]
 
 #Criando a arquitetura da rede neural
 modelo = Sequential()
-modelo.add(Dense(units=300, activation='relu', input_dim=7))
+modelo.add(Dense(units=3, activation='relu', input_dim=7))
 modelo.add(Dense(units=1, activation='linear'))
+
 #treinando a rede neural
 modelo.compile(loss='mse', optimizer='adam', metrics=['mae'])
 resultado = modelo.fit(x_treino, y_treino, epochs=200, batch_size=32, validation_data=(x_teste, y_teste))
