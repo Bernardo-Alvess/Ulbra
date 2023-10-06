@@ -35,6 +35,12 @@ def bubble_sort(lista):
                 lista[j-1] = temp
     print(lista)
 
+def insertion_sort(lista):
+    for i in range(1, len(lista)):
+        chave = i - 1
+        
+
+
 lista_original = []
 
 while True:
@@ -45,6 +51,7 @@ while True:
 4 - SELECTION SORT
 5 - BUBBLE SORT
 6 - TAMANHO DA LISTA
+7 - INSERTION SORT
 9 - LIMPAR LISTA
 0 - SAIR""")
     
@@ -73,6 +80,8 @@ while True:
     elif opc == 6:
         print(len(lista_original))
 
+    elif opc == 7:
+        pass
     elif opc == 9:
         lista_original.clear()
 
