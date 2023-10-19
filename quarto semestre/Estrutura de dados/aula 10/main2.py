@@ -80,6 +80,25 @@ def merge_sort(lista):
             j += 1
             k += 1
 
+def quick_sort():
+    if len(lista) <= 1:
+        return lista
+    else:
+        pivot = lista[0]
+        menores = []
+        maiores = []
+
+        for x in lista[1:]:
+            if x <= pivot:
+                menores.append(x)
+            else:
+                maiores.append(x)
+
+        menores_ordenados = quick_sort(menores)
+        maiores_ordenados = quick_sort(maiores)
+
+        ordenados = menores_ordenados + [pivot] + maiores_ordenados
+        return ordenados
 
 
 
