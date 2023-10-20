@@ -1,0 +1,1 @@
+[{"id":1,"varName":"Modelo da CPU","values":["AMD","Intel"],"type":"texto"},{"id":2,"varName":"Socket placa-mãe","values":["LGA 1150","LGA 1151","LGA 1200","AM4","AM3","AM3+"],"type":"texto"},{"id":1,"varName":"Frequencia RAM","values":["2300","3200","2400"],"type":"numerica"},{"id":2,"varName":"Slots memoria RAM","values":["2","4","8"],"type":"numerica"}]
