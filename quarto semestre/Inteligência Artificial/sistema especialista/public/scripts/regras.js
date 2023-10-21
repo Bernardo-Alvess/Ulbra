@@ -36,6 +36,7 @@ const adicionarCondicoes = async () => {
         radioAnd.type = 'radio'
         radioAnd.name = `operador-logico${num}`
         radioAnd.value = 'E'
+        radioAnd.className = 'logical-operator-radio-input'
 
         labelAnd.for = 'E'
         labelAnd.textContent = 'E'
@@ -48,7 +49,8 @@ const adicionarCondicoes = async () => {
         radioOr.value = 'OU'
         labelOr.for = 'OU'
         labelOr.textContent = 'OU'
-
+        radioOr.className = 'logical-operator-radio-input'
+        
         novoSelectDiv.appendChild(radioAnd)
         novoSelectDiv.appendChild(labelAnd)
         novoSelectDiv.appendChild(radioOr)

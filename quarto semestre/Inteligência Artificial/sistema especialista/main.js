@@ -1,3 +1,4 @@
+const { Console } = require("console");
 const express = require("express")
 const app = express()
 const router = express.Router()
@@ -46,11 +47,19 @@ router.get('/variaveis', (req, res) => {
 router.post('/vars', (req, res) => {
     const {id, varName, values, type} = req.body
 
-    const currFile = readFile('variaveis.json')
+    let currFile = readFile('variaveis.json')
     currFile.push({id, varName, values, type})
     fs.writeFileSync('data/variaveis.json', JSON.stringify(currFile), 'utf-8')
 
     res.send(currFile);
+})
+
+router.post('/regras', (req, res) => {
+    console.log(req.body)
+    let currFile = readFile('regras.json')
+    currFile.push(req.body)
+    fs.writeFileSync('data/regras.json', JSON.stringify(currFile), 'utf-8')
+    res.send(currFile)
 })
 
 router.post('/', (req, res) => {

@@ -32,7 +32,7 @@ function enviarVariavel(){
         "values": variableValues,
         "type": type
     }
-    
+
     const OPTIONS = {
         method: 'POST',
         body: JSON.stringify(data),
@@ -41,4 +41,5 @@ function enviarVariavel(){
         }
     }
     fetch('/vars', OPTIONS)
+    
 }

@@ -1,0 +1,11 @@
+[
+    {
+        "id":0,
+        "nomeRegra":"regra1",
+        "condicoes":[
+            {"var":"processador","op":"==","value":"intel"},
+            {"var":"processador","op":"==","value":"intel","statementOperator":"||"}
+        ],
+        "entao":{"var":"processador","value":"intel"}
+    }
+]
