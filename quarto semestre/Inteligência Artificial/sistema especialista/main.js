@@ -21,11 +21,16 @@ router.get('/', (req, res) => {
 })
 
 router.get('/vars', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/form_variaveis.html'))
+    res.sendFile(path.join(__dirname, 'public/views/form_variaveis.html'))
 })
 
 router.get('/regras', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/regras.html'))
+    res.sendFile(path.join(__dirname, 'public/views/regras.html'))
+})
+
+router.get('/regrasFile', (req, res) => {
+    const file = readFile('regras.json')
+    res.send(file)
 })
 
 router.get('/vars/:nome', async (req, res) => {
@@ -41,7 +46,18 @@ router.get('/variaveis', (req, res) => {
     res.send(content)
 })
 
+router.get('/gpu', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/views/gpu.html'))})
 
+router.get('/cpu', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/views/cpu.html'))})
+
+router.get('/memoria', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/views/memoria.html'))})
+
+router.get('/armazenamento', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/views/armazenamento.html'))
+})
 
 //rotas post
 router.post('/vars', (req, res) => {
