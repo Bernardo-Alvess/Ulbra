@@ -23,6 +23,10 @@ router.get('/vars', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/form_variaveis.html'))
 })
 
+router.get('/regras', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/regras.html'))
+})
+
 router.get('/vars/:nome', async (req, res) => {
     const file = readFile('variaveis.json')
     const nome = req.params.nome
@@ -36,9 +40,7 @@ router.get('/variaveis', (req, res) => {
     res.send(content)
 })
 
-router.get('/regras', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/regras.html'))
-})
+
 
 //rotas post
 router.post('/vars', (req, res) => {

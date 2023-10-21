@@ -1,65 +1,141 @@
-const form = document.getElementById('form-regras')
-const variavel = document.getElementById('variavel')
-const operador = document.getElementById('operador')
-const resultado = document.getElementById('resultado')
+let num = 0;
+const containerRegras = document.getElementById('container-regras')
+const operadoresNumericos = ['>', '>=', '<', '<=', '==', '!='];
+const operadoresTexto = ['==', '!='];
+const variaveisEl = document.querySelector('.variavel')
+let arraySelectsVar = []
 
-const operadoresNumericos = ['>', '>=', '<', '<=', '==', '!=']
-const operadoresTexto = ['==', '!=']
+const adicionarCondicoes = async () => {
+    
+    const novoSelectDiv = document.createElement('div');
+    novoSelectDiv.id = `condicao-regra${num}`;
 
-async function getData(){
-    const response = await fetch('/variaveis')
-    const json = response.json()
-    return await json
+    const novoVariavelSelect = document.createElement('select');
+    novoVariavelSelect.name = `variavel${num}`;
+    novoVariavelSelect.id = `variavel${num}`;
+    novoVariavelSelect.className = 'variavel';
+
+    const novoOperadorSelect = document.createElement('select');
+    novoOperadorSelect.name = `operador${num}`;
+    novoOperadorSelect.id = `operador${num}`;
+
+    const novoResultadoSelect = document.createElement('select');
+    novoResultadoSelect.name = `resultado${num}`;
+    novoResultadoSelect.id = `resultado${num}`;
+
+    novoSelectDiv.appendChild(novoVariavelSelect);
+    novoSelectDiv.appendChild(novoOperadorSelect);
+    novoSelectDiv.appendChild(novoResultadoSelect);
+    
+    if(num > 0){
+        const radioAnd = document.createElement('input')
+        const labelAnd = document.createElement('label')
+    
+        radioAnd.type = 'radio'
+        radioAnd.name = `operador-logico${num}`
+        radioAnd.value = 'E'
+
+        labelAnd.for = 'E'
+        labelAnd.textContent = 'E'
+
+        const radioOr = document.createElement('input')
+        const labelOr = document.createElement('label')
+
+        radioOr.type = 'radio'
+        radioOr.name = `operador-logico${num}`
+        radioOr.value = 'OU'
+        labelOr.for = 'OU'
+        labelOr.textContent = 'OU'
+
+        novoSelectDiv.appendChild(radioAnd)
+        novoSelectDiv.appendChild(labelAnd)
+        novoSelectDiv.appendChild(radioOr)
+        novoSelectDiv.appendChild(labelOr)
+    }
+    num++
+    containerRegras.appendChild(novoSelectDiv);
+    popularVariaveis(novoSelectDiv.id)
 }
 
-async function popularDados(){
-    const obj = await getData()
-    for(let key in obj){
-        const optionVar = document.createElement('option')
-        optionVar.textContent = obj[key].varName
-        optionVar.value = obj[key].varName
+const getData = async () => {
+    const response = await fetch('/variaveis');
+    const json = await response.json();
+    return json;
+}
 
-        
-        variavel.appendChild(optionVar)
+const getDataForVar = async (nome) => {
+    const response = await fetch(`/vars/${nome}`)
+    const json = await response.json();
+    return json;
+}
+
+function getElementChildrenArr(id){
+    const children = document.getElementById(id).children
+    let arr = Array.prototype.slice.call(children)
+    return arr
+}
+
+async function popularVariaveis(id){
+    const [variavelEl, operadorEl, resultadoEl] = getElementChildrenArr(id)
+
+    const json = await getData()
+    
+    for(let key of json){
+        const opt = document.createElement('option')
+        opt.value = key.varName
+        opt.text = key.varName
+        variavelEl.appendChild(opt)
+    }
+    console.log(variavelEl.value)
+    arraySelectsVar.push(variavelEl)
+
+    variavelEl.addEventListener('change', popularValores(variavelEl, operadorEl, resultadoEl))
+}
+
+const popularValores = async (variavelEl, operadorEl, resultadoEl) => {
+    const nome = variavelEl.value
+    const json = await getDataForVar(nome);
+    const tipoOperador = json.type === 'numerica' ? operadoresNumericos : operadoresTexto;
+    console.log(json)
+
+    operadorEl.innerHTML = ''
+    resultadoEl.innerHTML = ''
+
+    for(let value of json.values){
+        console.log(value)
+        const opt = document.createElement('option')
+        opt.value = value
+        opt.text = value
+        resultadoEl.appendChild(opt)
+    }
+
+    for(let op of tipoOperador){
+        const opt = document.createElement('option')
+        opt.value = op
+        opt.text = op
+        operadorEl.appendChild(opt)
     }
 }
 
-async function valoresVariavel(nome){
-    const response = await fetch(`/vars/${nome}`)
-    const json = response.json()
-    console.log(json)
-    return json
-}
+containerRegras.addEventListener('click', (e) => {
+    if(e.target.className === 'variavel'){
+        let num = e.target.id.charAt(e.target.id.length -1)
+        const variavelEl = document.getElementById(`variavel${num}`)
+        const operadorEl = document.getElementById(`operador${num}`)
+        const resultadoEl = document.getElementById(`resultado${num}`)
 
-document.addEventListener('DOMContentLoaded', async function() {
-    await popularDados()
+        //const [variavel, operador, resultado] = getElementChildrenArr(e.target.id)
+        console.log(variavelEl, operadorEl, resultadoEl)
+        popularValores(variavelEl, operadorEl, resultadoEl)
+    }
 })
 
-variavel.addEventListener('change', async () => {
-    const valorFiltrado = await valoresVariavel(variavel.value)
-    console.log(valorFiltrado)
-    resultado.innerHTML = ''
-    operador.innerHTML = ''
-    let tipoOperador = []
-    for(let i = 0; i < valorFiltrado.values.length; i++){
-        const valor = valorFiltrado.values[i]
-        const valoresOpt = document.createElement('option')
-        valoresOpt.textContent = valor
-        valoresOpt.value = valor
-        resultado.appendChild(valoresOpt)
-    }
+const variavelAcaoEl = document.getElementById('variavel-ent')
+const operadorAcaoEl = document.getElementById('operador-ent')
+const resultadoAcaoEl = document.getElementById('resultado-ent')
+const containerAcao = document.getElementById('container-acao')
 
-    if(valorFiltrado.type == 'numerica'){
-        tipoOperador = operadoresNumericos
-    }else{
-        tipoOperador = operadoresTexto
-    }
-
-    for(let i = 0; i < tipoOperador.length; i++){
-        const operadores = document.createElement('option')
-        operadores.textContent = tipoOperador[i]
-        operadores.value = tipoOperador[i]
-        operador.appendChild(operadores)
-    }
-    
+containerAcao.addEventListener('click', popularVariaveis(containerAcao.id))
+variavelAcaoEl.addEventListener('change', async () => {
+    popularValores(variavelAcaoEl, operadorAcaoEl, resultadoAcaoEl)
 })
