@@ -9,19 +9,19 @@
 
     <form onsubmit="return false" id="form-regras">
         <input type="text" name="nome" placeholder="Nome da regra">
-        <div id="condicao-regra">
-            <select name="variavel" id="variavel">
-            </select>
-            <select name="operador" id="operador">
-            </select>
-            <select name="resultado" id="resultado"></select>
+        <button type="button" id="adicionar-condicoes" onclick="adicionarCondicoes()">+</button>
+        <p>SE</p>
+        <div id="container-regras">
+
         </div>
-        <div id="condicao-regra">
-            <select name="variavel" id="variavel">
+        <p>ENTÃO</p>
+        <div id="container-acao">
+            
+            <select name="variavel" id="variavel-ent">
             </select>
-            <select name="operador" id="operador">
+            <select name="operador" id="operador-ent">
             </select>
-            <select name="resultado" id="resultado"></select>
+            <select name="resultado" id="resultado-ent"></select>
         </div>
         <input type="submit" value="Cadastrar">
     </form>
