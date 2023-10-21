@@ -18,10 +18,12 @@ const adicionarCondicoes = async () => {
     const novoOperadorSelect = document.createElement('select');
     novoOperadorSelect.name = `operador${num}`;
     novoOperadorSelect.id = `operador${num}`;
+    novoOperadorSelect.className = 'operador'
 
     const novoResultadoSelect = document.createElement('select');
     novoResultadoSelect.name = `resultado${num}`;
     novoResultadoSelect.id = `resultado${num}`;
+    novoResultadoSelect.className = 'resultado'
 
     novoSelectDiv.appendChild(novoVariavelSelect);
     novoSelectDiv.appendChild(novoOperadorSelect);
