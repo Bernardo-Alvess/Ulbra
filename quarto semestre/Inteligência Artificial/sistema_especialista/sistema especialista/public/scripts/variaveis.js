@@ -13,6 +13,7 @@ function limparCampos(){
     let input = document.createElement('input');
     input.type = 'text'
     input.required = true;
+    input.name = 'variableValues[]'
     container.appendChild(input);
 }
 
@@ -22,7 +23,6 @@ function enviarVariavel(){
     let variableValues = []
     const valueInputs = form.elements['variableValues[]']
 
-
     if(!valueInputs.length){
         variableValues = [valueInputs.value]
     }else{
@@ -31,6 +31,8 @@ function enviarVariavel(){
         }
     }
     
+    console.log(varName, variableValues)
+
     const data = {
         "varName": varName,
         "values": variableValues
