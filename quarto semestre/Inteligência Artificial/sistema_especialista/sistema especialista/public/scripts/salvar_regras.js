@@ -1,19 +1,19 @@
 const cadastrarRegra = async () => {
     const nomeRegra = document.getElementById('nome-regra').value
-    let arrChildrenContainerRegras = Array.prototype.slice.call(containerRegras.children)
-    let arr = arrChildrenContainerRegras.filter((el) => el.id != ''
-    )
-    let retorno = document.getElementById('select-acao').value
-    let arrValues = arr.map((val) => val.value.toLowerCase().replace(/\s/g, ""))
+    if(nomeRegra != ''){
+        let arrChildrenContainerRegras = Array.prototype.slice.call(containerRegras.children)
+        let arr = arrChildrenContainerRegras.filter((el) => el.id != '')
+        let retorno = document.getElementById('valores-acao').value
+        let arrValues = arr.map((val) => val.value.toLowerCase().replace(/\s/g, ""))
 
+        const data = {
+            var: nomeRegra,
+            values: arrValues,
+            retorno: retorno
+        }
 
-    const data = {
-        var: nomeRegra,
-        values: arrValues,
-        retorno: retorno
-    }
-
-    enviarBanco(data, 'regras/')
+        enviarBanco(data, 'regras/')
+    }  
 }
 
 

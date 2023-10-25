@@ -1,22 +1,27 @@
-let id = 0;
+const container = document.getElementById('values-container');
 
 function addInputField() {
-    var container = document.getElementById('values-container');
-    var input = document.createElement('input');
+    let input = document.createElement('input');
     input.type = 'text';
     input.name = 'variableValues[]';
     input.required = true;
     container.appendChild(input);
 }
 
+function limparCampos(){ 
+    container.innerHTML = '';
+    let input = document.createElement('input');
+    input.type = 'text'
+    input.required = true;
+    container.appendChild(input);
+}
 
 function enviarVariavel(){
-    id++
     const form = document.getElementById('variable-form')
     const varName = form.elements['variableName'].value
     let variableValues = []
     const valueInputs = form.elements['variableValues[]']
-    const type = form.elements['tipo-variavel'].value
+
 
     if(!valueInputs.length){
         variableValues = [valueInputs.value]
@@ -27,10 +32,8 @@ function enviarVariavel(){
     }
     
     const data = {
-        "id": id,
         "varName": varName,
-        "values": variableValues,
-        "type": type
+        "values": variableValues
     }
 
     const OPTIONS = {
@@ -42,4 +45,5 @@ function enviarVariavel(){
     }
     fetch('/vars', OPTIONS)
     
+    limparCampos()
 }

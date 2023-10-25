@@ -8,7 +8,7 @@
     <h1>Cadastro de regras</h1>
 
     <form onsubmit="return false" id="form-regras">
-        <input type="text" name="nome" placeholder="Nome da regra" id="nome-regra">
+        <input type="text" name="nome" placeholder="Nome da regra" id="nome-regra" required>
         <select name="categoria" id="categoria">
             <option value="cpu">cpu</option>
             <option value="gpu">gpu</option>
@@ -21,7 +21,12 @@
         </div>
         <p>ENTÃO</p>
         <div id="container-acao">
-            
+            <select name="variaveis-acao" id="variaveis-acao">
+
+            </select>
+            <select name="valores-acao" id="valores-acao">
+
+            </select>
         </div>
         <input type="submit" value="Cadastrar" onclick="cadastrarRegra()">
     </form>
