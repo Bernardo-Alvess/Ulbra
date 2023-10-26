@@ -1,7 +1,0 @@
-[
-    {
-        "var": "regra1",
-        "values": ["intel", "lga1151", "baixo"],
-        "retorno": "Intel Core i3-9100"
-    }
-]
