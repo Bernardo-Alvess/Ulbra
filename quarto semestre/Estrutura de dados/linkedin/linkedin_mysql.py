@@ -1,7 +1,15 @@
-import sqlite3
+import mysql.connector
+
+db_config = {
+    'user':'turma6ntop',
+    'password':'turma6ntop',
+    'host':'db4free.net',
+    'database':'linkedin6n',
+    'port': 3306
+}
 
 def criar_banco():
-    conn = sqlite3.connect('linkedin_network.db')
+    conn = mysql.connector.connect(**db_config)
     cursor = conn.cursor()
 
     cursor.execute(
@@ -16,7 +24,7 @@ def criar_banco():
         '''CREATE TABLE IF NOT EXISTS conexoes (
         id INTEGER PRIMARY KEY,
         contato1_id INTEGER,
-        contato2_id INTEGER,
+        contato2_id INTEGER,~~
         FOREIGN KEY (contato1_id) REFERENCES contatos(id) ON DELETE CASCADE,
         FOREIGN KEY (contato2_id) REFERENCES contatos(id) ON DELETE CASCADE
         )'''
@@ -26,7 +34,7 @@ def criar_banco():
     conn.close()
 
 def adicionar_contato(id, nome, perfil_linkedin):
-    conn = sqlite3.connect('linkedin_network.db')
+    conn = mysql.connector.connect('linkedin_network.db')
     cursor = conn.cursor()
 
     cursor.execute('INSERT INTO contatos (id, nome, perfil_linkedin) VALUES (?, ?, ?)', (id, nome, perfil_linkedin))
@@ -34,7 +42,7 @@ def adicionar_contato(id, nome, perfil_linkedin):
     conn.close()
 
 def listar_contatos():
-    conn = sqlite3.connect('linkedin_network.db')
+    conn = mysql.connector.connect('linkedin_network.db')
     cursor = conn.cursor()
 
     cursor.execute('SELECT * FROM contatos')
@@ -44,7 +52,7 @@ def listar_contatos():
     return contatos
 
 def adicionar_conexao(contato1_id, contato2_id):
-    conn = sqlite3.connect('linkedin_network.db')
+    conn = mysql.connector.connect('linkedin_network.db')
     cursor = conn.cursor()
 
     cursor.execute('BEGIN')
@@ -60,14 +68,14 @@ def adicionar_conexao(contato1_id, contato2_id):
             
         conn.commit()
 
-    except sqlite3.IntegrityError:
+    except mysql.connector.IntegrityError:
         conn.rollback()
         print("Ocorreu um erro de concorrência. Tente novamente.")
             
     conn.close()
 
 def listar_conexoes(contato_id):
-    conn = sqlite3.connect('linkedin_network.db')
+    conn = mysql.connector.connect('linkedin_network.db')
     cursor = conn.cursor()
 
     cursor.execute(
@@ -87,7 +95,7 @@ def listar_conexoes(contato_id):
     return conexoes
 
 def excluir_contato(contato_id):
-    conn = sqlite3.connect('linkedin_network.db')
+    conn = mysql.connector.connect('linkedin_network.db')
     cursor = conn.cursor()
 
     cursor.execute('BEGIN')
@@ -98,7 +106,7 @@ def excluir_contato(contato_id):
     #     print("Contato excluído com sucesso.")
     #     conn.commit()
 
-    # except sqlite3.IntegrityError:
+    # except mysql.connector.IntegrityError:
     #     conn.rollback()
     #     print("Existe uma conexão com este contato. O contato será excluído, e as conexões também.")
     conn.commit()
@@ -106,7 +114,7 @@ def excluir_contato(contato_id):
 
 
 def excluir_conexao(contato1_id, contato2_id):
-    conn = sqlite3.connect('linkedin_network.db')
+    conn = mysql.connector.connect('linkedin_network.db')
     cursor = conn.cursor()
     cursor.execute('DELETE FROM conexoes WHERE (contato1_id = ? AND contato2_id = ?) OR (contaoto1_id = ? AND contato2_id = ?)', (contato1_id, contato2_id, contato2_id, contato1_id))
 
