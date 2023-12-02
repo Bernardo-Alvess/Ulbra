@@ -13,3 +13,7 @@ class Linkedin:
     
     def deletar_contato(self, id):
         self.db.deletarContato(id)
+
+    def consultar_contatos(self):
+        return self.db.consultarContatos()
+        

@@ -40,22 +40,23 @@ class Database:
 
         print(f'Usuário: "{nome}" adicionado com sucesso')
 
-    def deletarContato(id):
-        conn = mysql.connector.connect('linkedin_network.db')
+    def deletarContato(self, id):
+        conn = mysql.connector.connect(**self.dbconfig)
         cursor = conn.cursor()
 
         cursor.execute('BEGIN')
-        cursor.execute('DELETE FROM conexoes_maik_bernas WHERE id = %s OR contato2_id = %s', (id, id))
-        cursor.execute('DELETE FROM contatos_maik_bernas WHERE id = %s', (id))
-        # try:
-            
-        #     print("Contato excluído com sucesso.")
-        #     conn.commit()
+        #cursor.execute('DELETE FROM conexoes_maik_bernas WHERE id = %i OR contato2_id = %i', (id, id))
+        cursor.execute('DELETE FROM contatos_maik_bernas WHERE id = %s', (id,))
 
-        # except mysql.connector.IntegrityError:
-        #     conn.rollback()
-        #     print("Existe uma conexão com este contato. O contato será excluído, e as conexões também.")
         conn.commit()
         conn.close()
 
         print('Contato removido com sucesso')
+
+    def consultarContatos(self):
+        conn = mysql.connector.connect(**self.dbconfig)
+        cursor = conn.cursor()
+        cursor.execute('SELECT * FROM contatos_maik_bernas')
+        contatos = cursor.fetchall()
+        conn.close()
+        return contatos
