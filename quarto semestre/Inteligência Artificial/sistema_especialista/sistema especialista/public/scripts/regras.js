@@ -62,7 +62,6 @@ const criarElementos = (nome, valores) => {
 }
 
 const valorAcao = async (varName) => {
-    console.log('alouuu')
     valorAcaoElement.innerHTML = ''
     const response = await fetch(`/vars/${varName}`)
     const json = await response.json()

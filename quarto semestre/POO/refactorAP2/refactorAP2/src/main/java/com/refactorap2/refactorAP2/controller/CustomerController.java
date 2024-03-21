@@ -1,4 +1,5 @@
 package com.refactorap2.refactorAP2.controller;
+import com.refactorap2.refactorAP2.dtos.CustomerDTO;
 import com.refactorap2.refactorAP2.entities.Customer;
 import com.refactorap2.refactorAP2.services.CustomerService;
 import jakarta.annotation.Nullable;
@@ -26,9 +27,8 @@ public class CustomerController {
     }
 
     @PostMapping
-    public ResponseEntity saveCustomer(@RequestBody Customer customer){
-        this.service.addCustomer(customer);
-        return ResponseEntity.status(201).body(customer);
+    public CustomerDTO saveCustomer(@RequestBody CustomerDTO customer){
+        return this.service.addCustomer(customer);
     }
 
     @PutMapping("/{id}")

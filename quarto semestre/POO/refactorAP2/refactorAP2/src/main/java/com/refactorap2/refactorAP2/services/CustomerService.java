@@ -1,69 +1,95 @@
 package com.refactorap2.refactorAP2.services;
 
+import com.refactorap2.refactorAP2.dtos.CustomerDTO;
+import com.refactorap2.refactorAP2.exceptions.NoCustomersFoundException;
 import com.refactorap2.refactorAP2.repositories.CustomerRepository;
+import jakarta.persistence.EntityManager;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
-import com.refactorap2.refactorAP2.entities.Customer;
 
-import javax.swing.text.DefaultEditorKit;
+import com.refactorap2.refactorAP2.entities.Customer;
 
 @Service
 public class CustomerService {
 
-
+    private ArrayList<CustomerDTO> changeToCustomerDtoList(List<Customer> customers){
+        ArrayList<CustomerDTO> customerDtosList = new ArrayList<>();
+        for(Customer customer : customers){
+            customerDtosList.add(customer.toCustomerDTO());
+        }
+        return customerDtosList;
+    }
+    EntityManager entityManager;
     CustomerRepository repository;
     @Autowired
-    public CustomerService(CustomerRepository repository){ this.repository = repository; }
+    public CustomerService(CustomerRepository repository, EntityManager entityManager){
+        this.repository = repository;
+        this.entityManager = entityManager;
+    }
 
 
-    public Iterable<Customer> getAllCustomers(Integer age) {
+    public List<CustomerDTO> getAllCustomers(Integer age) {
         if(age == null){
-            return this.repository.findAll();
+            List<Customer> customerList = (List<Customer>) this.repository.findAll();
+            ArrayList<CustomerDTO> list =  this.changeToCustomerDtoList(customerList);
+            if(customerList.isEmpty()){
+                throw new NoCustomersFoundException();
+            }
+            return list;
         }else{
             return getCustomerByAge(age);
         }
     }
 
-    public ArrayList<Customer> getCustomerByAge(int age){
-       ArrayList<Customer> filteredCustomers = new ArrayList<>();
+    public List<CustomerDTO> getCustomerByAge(int age){
+       List<Customer> filteredCustomers = new ArrayList<>();
+       List<CustomerDTO> list = getAllCustomers(null);
 
-       Iterable<Customer> list = getAllCustomers(null);
-
-        for(Customer customer : list){
+        for(CustomerDTO customer : list){
             if(customer.getAge() == age){
-                filteredCustomers.add(customer);
+                filteredCustomers.add(customer.toCustomer());
             }
         }
-        return filteredCustomers;
+        return this.changeToCustomerDtoList(filteredCustomers);
     }
-    public void addCustomer(Customer customer){
-        this.repository.save(customer);
-    }
-
-    public Optional<Customer> getCustomerById(Long id){
-        return this.repository.findById(id);
+    public CustomerDTO addCustomer(CustomerDTO customerDTO){
+        Customer customerSave = this.repository.save(customerDTO.toCustomer());
+        return customerDTO;
     }
 
-    public Optional<Customer> updateCustomer(Long id, Customer customer){
-        Optional<Customer> customer1 = this.repository.findById(id);
-        customer1.get().setAge(customer.getAge());
-        customer1.get().setName(customer.getName());
-        customer1.get().setProfession(customer.getProfession());
-
-        this.repository.s
-        return customer1;
-    }
-
-    public String deleteCustomerById(Long id){
-        try {
-            this.repository.deleteById(id);
-            return "sucesso";
-
-        } catch (IllegalArgumentException e){
-            return null;
+    public CustomerDTO getCustomerById(Long id){
+        Optional<Customer> customer = this.repository.findById(id);
+        if(customer.isPresent()){
+            return customer.get().toCustomerDTO();
+        }else{
+            throw new NoCustomersFoundException();
         }
+    }
+    @Transactional
+    public CustomerDTO updateCustomer(Long id, Customer customer){
+        Customer customerToUpdate = entityManager.find(Customer.class, id);
+        if(customerToUpdate == null){
+            throw new NoCustomersFoundException();
+        }
+        customerToUpdate.setAge(customer.getAge());
+        customerToUpdate.setName(customer.getName());
+        customerToUpdate.setProfession(customer.getProfession());
+        entityManager.merge(customerToUpdate);
+
+        return customerToUpdate.toCustomerDTO();
+    }
+
+    public CustomerDTO deleteCustomerById(Long id){
+
+        Customer customerToDelete = getCustomerById(id).toCustomer();
+        if(customerToDelete != null){
+            this.repository.deleteById(id);
+        }
+        return customerToDelete.toCustomerDTO();
     }
 }

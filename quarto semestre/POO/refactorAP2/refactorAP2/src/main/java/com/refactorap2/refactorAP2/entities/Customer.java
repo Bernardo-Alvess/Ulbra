@@ -1,5 +1,5 @@
 package com.refactorap2.refactorAP2.entities;
-
+import com.refactorap2.refactorAP2.dtos.CustomerDTO;
 import jakarta.persistence.*;
 
 @Entity
@@ -9,6 +9,16 @@ public class Customer{
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    public Customer(){}
+    public Customer(String name, int age, String profession) {
+        this.name = name;
+        this.age = age;
+        this.profession = profession;
+    }
+
+    public CustomerDTO toCustomerDTO(){
+        return new CustomerDTO(this.name, this.age, this.profession);
+    }
     public Long getId() {
         return id;
     }
